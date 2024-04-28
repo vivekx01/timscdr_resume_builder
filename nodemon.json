@@ -1,0 +1,7 @@
+{
+  "watch": [".", "views", "routes"],
+  "ext": "js,json,handlebars,hbs,css,html",
+  "exec": "node app.js",
+  "ignore": ["node_modules", "public"],
+  "delay": 1000
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hexagon Image with Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .clip-hexagon {
+      clip-path: polygon(25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="clip-hexagon w-48 h-40 overflow-hidden bg-blue-500">
+    <img src="/public/images/display_photo.jpg" alt="Hexagon Image" class="object-cover w-full h-full">
+  </div>
+</body>
+
+</html>

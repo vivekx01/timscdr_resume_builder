@@ -6,19 +6,29 @@
         <h1 class="text-lg font-bold text-center">Resume Preview</h1>
         <div class="resume-container mt-2 mb-5 flex items-center justify-center">
             <div class="a4-page w-[794px] h-[1123px] bg-white border border-black shadow-lg flex">
-                <div class="resume-left bg-[#303c54] basis-4/12 text-white flex flex-col">
-                    <div class="bg-gray-500 text-black basis-2/12">
-                        left upper side
+                {{! Resume Left side }}
+                <div class="resume-left relative basis-4/12 text-white flex flex-col">
+                    <div class="bg-white text-black basis-[23%] flex flex-col items-center">
+                        <img class="mt-4" src="/images/timscdr_logo.png" alt="Timscdr Logo" height="150px"
+                            width="150px" />
                     </div>
-                    <div class="basis-10/12">
-                        left lower side
+                    <img class="clip-hexagon w-40 h-36 overflow-hidden absolute left-1/2 -translate-x-1/2 top-[168px]"
+                        src="/images/display_photo.jpg" alt="student photo" />
+                    <div class="basis-[77%] bg-[#303c54] flex flex-col items-center">
                     </div>
                 </div>
+                {{! Resume Right side }}
                 <div class="resume-right basis-8/12 flex flex-col">
-                    <div class="right-upper-side bg-yellow-200 basis-1/12">right upper side</div>
-                    <div class="right-lowerside basis-11/12">right lower side</div>
+                    <div class="right-upper-side basis-[9%] flex flex-col justify-center">
+                        <h1 class="text-5xl text-[#424544] font-bold ml-2">Vivek Shukla</h1>
+                    </div>
+                    <div class="basis-[1%] flex">
+                        <div class="text-xs font-bold ml-1 basis-[30%] text-[#424544]">MCA
+                            Batch (2022-24)</div>
+                        <div class="bg-[#303c54] basis-[70%]"></div>
+                    </div>
+                    <div class="right-lowerside bg-green-200 basis-[90%]">right lower side</div>
                 </div>
-                
             </div>
         </div>
     </div>

@@ -1,10 +1,13 @@
 <div class="main h-full flex flex-cols">
+    {{!-- Editor --}}
     <div class="left-side basis-4/12 bg-black text-white">
         <h1 class="text-lg font-bold text-center mt-2">Resume Builder</h1>
     </div>
+    {{!-- Preview --}}
     <div class="right-side basis-8/12 bg-gray-200 overflow-auto">
         <h1 class="text-lg font-bold text-center">Resume Preview</h1>
         <div class="resume-container mt-2 mb-5 flex items-center justify-center">
+            {{!-- Resume page --}}
             <div class="a4-page w-[794px] h-[1123px] bg-white border border-grey-400 shadow-lg flex">
                 {{! Resume Left side }}
                 <div class="resume-left relative basis-4/12 text-white flex flex-col">
@@ -28,7 +31,17 @@
                         <div class="bg-[#303c54] basis-[67%]"></div>
                         <div class="basis-[3%]"></div>
                     </div>
-                    <div class="right-lowerside bg-green-200 basis-[90%]">right lower side</div>
+                    <div class="right-lowerside basis-[90%] flex flex-col">
+                        <div class="flex flex-col basis-[95%]">
+                            <div class="section-1 bg-yellow-200 basis-[15%]">1</div>
+                            <div class="section-2 bg-green-200 basis-[15%]">2</div>
+                            <div class="section-3 bg-yellow-200 basis-[20%]">3</div>
+                            <div class="section-4 bg-green-200 basis-[20%]">4</div>
+                            <div class="section-5 bg-yellow-200 basis-[15%]">5</div>
+                            <div class="section-6 bg-green-200 basis-[15%]">6</div>
+                        </div>
+                        <div class="basis-[5%] bg-orange-300">Address</div>
+                    </div>
                 </div>
             </div>
         </div>

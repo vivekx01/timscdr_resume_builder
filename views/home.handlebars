@@ -5,16 +5,38 @@
     </div>
     {{!-- Preview --}}
     <div class="right-side basis-8/12 bg-gray-200 overflow-auto">
-        <h1 class="text-lg font-bold text-center">Resume Preview</h1>
+        <div class="flex space-x-3 justify-center items-center">
+            <h1 class="text-lg font-bold text-center">Resume Preview</h1>
+            <div class="action-buttons text-center">
+                <button id="generate-pdf-btn" class="bg-green-500 text-white px-4 py-2 rounded">Generate PDF</button>
+            </div>
+        </div>
         <div class="resume-container mt-2 mb-5 flex items-center justify-center">
             <div class="a4-page w-[794px] h-[1123px] bg-white border border-grey-400 shadow-lg flex">
+                {{!-- Dependencies --}}
+                <script src="https://cdn.tailwindcss.com"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer" />
+                {{!-- Css for clip hexagon --}}
+                <style>
+                    .clip-hexagon {
+                        clip-path: polygon(25% 0%,
+                                75% 0%,
+                                100% 50%,
+                                75% 100%,
+                                25% 100%,
+                                0% 50%);
+                    }
+                </style>
+                {{!-- Resume Left --}}
                 <div class="resume-left relative basis-4/12 text-white flex flex-col">
                     <div class="bg-white text-black basis-[23%] flex flex-col items-center">
-                        <img class="mt-4" src="/images/timscdr_logo.png" alt="Timscdr Logo" height="150px"
-                            width="150px" />
+                        <img class="mt-4" src="http://localhost:6868/images/timscdr_logo.png" alt="Timscdr Logo"
+                            height="150px" width="150px" />
                     </div>
                     <img class="clip-hexagon w-40 h-38 overflow-hidden absolute left-1/2 -translate-x-1/2 top-[168px]"
-                        src="/images/display_photo.jpg" alt="student photo" />
+                        src="http://localhost:6868/images/display_photo.jpg" alt="student photo" />
                     <div class="basis-[77%] bg-[#303c54] flex flex-col items-center">
                         <div class="resume-left-content text-white mt-[100px] flex flex-col h-[100%] w-[100%]">
                             <div class="section-1 basis-[15%] text-white">
@@ -118,6 +140,7 @@
                         </div>
                     </div>
                 </div>
+                {{!-- Resume Right --}}
                 <div class="resume-right basis-8/12 flex flex-col">
                     <div class="right-upper-side basis-[9%] flex flex-col justify-center">
                         <h1 class="text-5xl text-[#424544] font-bold ml-2">Vivek Shukla</h1>
@@ -282,3 +305,4 @@
         </div>
     </div>
 </div>
+<script src="/js/generatePdf.js"></script>

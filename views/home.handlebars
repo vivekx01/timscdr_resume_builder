@@ -7,9 +7,7 @@
     <div class="right-side basis-8/12 bg-gray-200 overflow-auto">
         <h1 class="text-lg font-bold text-center">Resume Preview</h1>
         <div class="resume-container mt-2 mb-5 flex items-center justify-center">
-            {{!-- Resume page --}}
             <div class="a4-page w-[794px] h-[1123px] bg-white border border-grey-400 shadow-lg flex">
-                {{! Resume Left side }}
                 <div class="resume-left relative basis-4/12 text-white flex flex-col">
                     <div class="bg-white text-black basis-[23%] flex flex-col items-center">
                         <img class="mt-4" src="/images/timscdr_logo.png" alt="Timscdr Logo" height="150px"
@@ -18,39 +16,142 @@
                     <img class="clip-hexagon w-40 h-38 overflow-hidden absolute left-1/2 -translate-x-1/2 top-[168px]"
                         src="/images/display_photo.jpg" alt="student photo" />
                     <div class="basis-[77%] bg-[#303c54] flex flex-col items-center">
+                        <div class="resume-left-content text-white mt-[100px] flex flex-col h-[100%] w-[100%]">
+                            <div class="section-1 basis-[15%] text-white">
+                                <div class="section-container ml-5">
+                                    <h1 class='text-sm font-semibold inline-block border-b-2 border-white'>ABOUT ME</h1>
+                                    <div class="section-details mt-2">
+                                        <p class='text-[0.6rem]'>Date of Birth: 14/08/2001</p>
+                                        <p class='text-[0.6rem]'>Age: 22</p>
+                                        <p class='text-[0.6rem]'>Gender: Male</p>
+                                        <p class='text-[0.6rem]'>Birth Place: Mumbai</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-2 basis-[22%]">
+                                <div class="section-container ml-5">
+                                    <h1 class='text-sm font-semibold inline-block border-b-2 border-white'>CONTACT</h1>
+                                    <div class="section-details mt-2 space-y-1">
+                                        <div class="location flex space-x-2">
+                                            <span><i class="fa-solid fa-location-dot"></i> </span>
+                                            <p class='text-[0.6rem] flex justify-center items-center'>
+                                                H/200, Janta Colony,
+                                                Navneet Chowk, Worli Village,
+                                                Mumbai - 400030
+                                            </p>
+                                        </div>
+                                        <div class="mobile flex space-x-2">
+                                            <span><i class="fa-solid fa-phone"></i> </span>
+                                            <p class='text-[0.6rem] flex justify-center items-center'>
+                                                +91 9619037203
+                                            </p>
+                                        </div>
+                                        <div class="email flex space-x-2">
+                                            <span><i class="fa-solid fa-envelope"></i> </span>
+                                            <p class='text-[0.6rem] flex justify-center items-center'>
+                                                viveks95944@gmail.com
+                                            </p>
+                                        </div>
+                                        <div class="linkedin flex space-x-2">
+                                            <span><i class="fa-brands fa-linkedin"></i> </span>
+                                            <a class='text-[0.6rem] flex justify-center items-center'
+                                                href='https://www.linkedin.com/in/vivekx01/'>
+                                                https://www.linkedin.com/in/vivekx01/
+                                            </a>
+                                        </div>
+                                        <div class="github flex space-x-2">
+                                            <span><i class="fa-brands fa-github"></i> </span>
+                                            <a class='text-[0.6rem] flex justify-center items-center'
+                                                href='https://github.com/vivekx01'>
+                                                https://github.com/vivekx01
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-3 basis-[10%]">
+                                <div class="section-container ml-5">
+                                    <h1 class='text-sm font-semibold inline-block border-b-2 border-white'>INTERESTS
+                                    </h1>
+                                    <div class="section-details mt-2 space-y-2">
+                                        <li class='text-[0.6rem]'>Watching anime</li>
+                                        <li class='text-[0.6rem]'>Exploring New Tech</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-4 basis-[10%]">
+                                <div class="section-container ml-5">
+                                    <h1 class='text-sm font-semibold inline-block border-b-2 border-white'>LANGUAGES
+                                        KNOWN</h1>
+                                    <div class="section-details mt-2 space-y-2">
+                                        <li class='text-[0.6rem]'>English</li>
+                                        <li class='text-[0.6rem]'>Hindi</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-5 basis-[40%]">
+                                <div class="section-container ml-5">
+                                    <h1 class='text-sm font-semibold inline-block border-b-2 border-white'>TECHNICAL
+                                        SKILLS</h1>
+                                    <div class="section-details mt-2 ">
+                                        <div class="programming-languages space-y-2">
+                                            <h2 class='text-[0.6rem]'>Programming Languages:</h2>
+                                            <li class='text-[0.6rem]'>Javascript/TypeScript</li>
+                                            <li class='text-[0.6rem]'>Python</li>
+                                        </div>
+
+                                        <div class="databases mt-5 space-y-2">
+                                            <h2 class='text-[0.6rem]'>Databases:</h2>
+                                            <li class='text-[0.6rem]'>PostgreSQL</li>
+                                            <li class='text-[0.6rem]'>MongoDB</li>
+                                        </div>
+
+                                        <div class="technologies mt-5 space-y-2">
+                                            <h2 class='text-[0.6rem]'>Technologies/frameworks:</h2>
+                                            <li class='text-[0.6rem]'>Angular</li>
+                                            <li class='text-[0.6rem]'>Django Framework</li>
+                                            <li class='text-[0.6rem]'>FAST API</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                {{! Resume Right side }}
                 <div class="resume-right basis-8/12 flex flex-col">
                     <div class="right-upper-side basis-[9%] flex flex-col justify-center">
                         <h1 class="text-5xl text-[#424544] font-bold ml-2">Vivek Shukla</h1>
                     </div>
                     <div class="basis-[1%] flex">
-                        <div class="text-xs font-bold ml-1 basis-[30%] text-[#424544]">MCA
+                        <div class="text-xs font-bold ml-3 basis-[30%] text-[#424544]">MCA
                             Batch (2022-24)</div>
                         <div class="bg-[#303c54] basis-[67%]"></div>
                         <div class="basis-[3%]"></div>
                     </div>
                     <div class="right-lowerside basis-[90%] flex flex-col">
-                        <div class="main-content flex flex-col basis-[95%] text-[#424544]">
+                        <div class="main-content flex flex-col basis-[95%] text-[#424544] ml-3">
                             <div class="section-1 basis-[17%] flex justify-center">
                                 <div class="section-container h-[100%] w-[90%]">
-                                    <h1 class="section-title text-md font-bold mt-5">EDUCATION</h1>
-                                    <hr class="border border-[#303c54] w-[24%]">
-                                    <p class="masters text-xs font-bold mt-2">MCA | Thakur Institute of Management Studies, Career Development &
+                                    <h1
+                                        class="section-title text-md font-bold mt-5 inline-block border-b-2 border-[#303c54]">
+                                        EDUCATION</h1>
+                                    <p class="masters text-xs font-bold mt-2">MCA | Thakur Institute of Management
+                                        Studies, Career Development &
                                         Research (TIMSCDR), Mumbai | 8.38 CGPA |2022-24
                                     </p>
                                     <p class="masters-uni text-xs">University of Mumbai</p>
 
-                                    <p class="masters text-xs font-bold mt-2">BSC COMPUTER SCIENCE | Guru Nanak Khalsa College | 9.67 CGPA | 2019-22
+                                    <p class="masters text-xs font-bold mt-2">BSC COMPUTER SCIENCE | Guru Nanak Khalsa
+                                        College Of Arts, Science and Commerce | 9.67 CGPA | 2019-22
                                     </p>
                                     <p class="masters-uni text-xs">University of Mumbai</p>
                                 </div>
                             </div>
                             <div class="section-2 basis-[15%] flex justify-center">
                                 <div class="section-container h-[100%] w-[90%]">
-                                    <h1 class="section-title text-md font-bold mt-2">HSC & SSC</h1>
-                                    <hr class="border border-[#303c54] w-[24%]">
+                                    <h1
+                                        class="section-title text-md font-bold mt-2 inline-block border-b-2 border-[#303c54]">
+                                        HSC & SSC</h1>
                                     <p class="hsc text-xs font-bold mt-2">
                                         XII (HSC)| Guru Nanak Khalsa College| 65.08 % | 2019
                                     </p>
@@ -69,27 +170,112 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="section-3 bg-yellow-200 basis-[20%] flex justify-center">
-                                <div class="section-container h-[100%] w-[90%]">
-                                    <h1 class="section-title text-md font-bold mt-2">Experience</h1>
-                                    <hr class="border border-[#303c54] w-[24%]">
+                            <div class="section-3  basis-[30%] flex justify-center">
+                                <div class="section-container h-[100%] w-[90%] space-y-2">
+                                    <h1
+                                        class="section-title text-md font-bold mt-1 inline-block border-b-2 border-[#303c54]">
+                                        PROJECTS UNDERTAKEN</h1>
                                     <p class="job-details text-xs font-bold mt-2">
-                                        Software Engineer | XYZ Company | 2017 - 2019
+                                        INVESTOCRYPT | <a class='text-blue-700 underline'
+                                            href="https://investo-crypt.web.app">https://investo-crypt.web.app</a> | Feb
+                                        2023
                                     </p>
-                                    <p class="hsc-stream text-xs">
-                                        Science
+                                    <div class="bullet-points text-xs mt-1">
+                                        <li>
+                                            An online investor-focused crypto-currency price tracker and a platform
+                                            that provides useful insights of the cryptocurrency market daily.
+                                        </li>
+                                        <li>
+                                            Built using Angular, Firebase data provided by Alternative.me API
+                                        </li>
+                                    </div>
+
+                                    <p class="job-details text-xs font-bold mt-2">
+                                        DECENTRALISED VOTING SYSTEM | <a class='text-blue-700 underline'
+                                            href="https://github.com/vivekx01/blockchain-voting-system">Github-Link</a>
+                                        |
+                                        May 2022
                                     </p>
-                                    <p class="hsc-board text-xs">
-                                        Maharashtra State Board of Secondary and Higher Secondary
+                                    <div class="bullet-points text-xs mt-1">
+                                        <li>An experimental project showcasing the potential of online
+                                            decentralized elections using blockchain technology.</li>
+                                        <li>It is built using
+                                            Angular, Django-REST, Solidity and Firebase.</li>
+                                    </div>
+
+                                    <p class="job-details text-xs font-bold mt-2">
+                                        SCRAPMART | <a class='text-blue-700 underline'
+                                            href="https://scrapmart.onrender.com/">https://scrapmart.onrender.com/</a> |
+                                        August 2021
                                     </p>
+                                    <div class="bullet-points text-xs mt-1">
+                                        <li>
+                                            A search listing platform, enabling users to search for local scrap dealers
+                                            in their area. The web application is optimized to work on all devices.
+                                        </li>
+                                        <li>
+                                            Built using Django framework and Postgresql.
+                                        </li>
+                                    </div>
 
                                 </div>
                             </div>
-                            <div class="section-4 bg-green-200 basis-[20%] flex justify-center">4</div>
-                            <div class="section-5 bg-yellow-200 basis-[15%] flex justify-center">5</div>
-                            <div class="section-6 bg-green-200 basis-[13%] flex justify-center">6</div>
+                            <div class="section-4 basis-[12%] flex justify-center">
+                                <div class="section-container h-[100%] w-[90%]">
+                                    <h1
+                                        class="section-title text-md font-bold mt-1 inline-block border-b-2 border-[#303c54]">
+                                        FUNDAMENTALS KNOWN</h1>
+                                    <div class="bullet-points text-xs mt-1">
+                                        <li>Database Management Systems (DBMS)</li>
+                                        <li>Networking Fundamentals</li>
+                                        <li>Cloud Fundamentals</li>
+                                        <li>Tools – Git/Github, Docker, VS Code, Linux Basics</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-5  basis-[12%] flex justify-center">
+                                <div class="section-container h-[100%] w-[90%]">
+                                    <h1
+                                        class="section-title text-md font-bold mt-1 inline-block border-b-2 border-[#303c54]">
+                                        CERTIFICATIONS</h1>
+                                    <div class="bullet-points text-xs mt-1">
+                                        <li>Blockchain and its Applications – NPTEL and IIT Kharagpur</li>
+                                        <li>Ethical Hacking – NPTEL and IIT Kharagpur</li>
+                                        <li>Angular Developer Bootcamp from LearnCodeOnline</li>
+                                        <li>Career Edge Course on Soft Skills - TCS iON</li>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="section-6 basis-[12%] flex justify-center">
+                                <div class="section-container h-[100%] w-[90%]">
+                                    <h1
+                                        class="section-title text-md font-bold mt-1 inline-block border-b-2 border-[#303c54]">
+                                        CO-CURRICULAR AND EXTRA-CURRICULAR ACTIVITIES
+                                    </h1>
+                                    <div class="bullet-points text-xs mt-1">
+                                        <li>Member of Research & Development Committee at TIMSCDR</li>
+                                        <li>Member of Department of Lifelong Learning and Extension (DLLE) at TIMSCDR
+                                        </li>
+                                        <li>Member of Vista 2023 Committee</li>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
-                        <div class="basis-[5%] bg-orange-300">Address</div>
+                        <div class="basis-[6%] flex flex-col items-center">
+                            <hr class="border border-[#303c54] w-[98%]" />
+                            <div class="section-container font-semibold text-[0.6rem] h-[90%] w-[90%] tracking-normal">
+                                <p class="mt-1">
+                                    <span class="font-bold">Institute Address:</span>
+                                    Thakur Institute of Management Studies Career Development and Research -
+                                    Thakur Education Campus, Thakur Village, Kandivali East. Mumbai 400101.
+                                </p>
+                                <p>
+                                    Phone Nos: 022- 28840484/91. E-mail ID: timscdr.tnp@thakureducation.org
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

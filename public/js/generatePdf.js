@@ -2,6 +2,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Function to send the content of the a4-page div to the server
     const sendHtmlForPdf = async () => {
+      const loader_element = document.getElementById('download-loader')
+      const download_button = document.getElementById('generate-pdf-btn')
+      loader_element.classList.remove('hide');
+      download_button.classList.add('hide');
       const a4PageContent = document.querySelector('.a4-page').outerHTML; // Get outer HTML of the a4-page
   
       try {
@@ -20,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
           link.href = URL.createObjectURL(blob);
           link.download = 'Resume.pdf'; // Name of the downloaded file
           link.click();
+          loader_element.classList.add('hide');
+          download_button.classList.remove('hide');
         } else {
           console.error('Failed to generate PDF');
         }

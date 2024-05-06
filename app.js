@@ -33,6 +33,11 @@ app.post('/generate-pdf', async (req, res) => {
 
     // Set the HTML content to the Puppeteer page
     await page.setContent(html, { waitUntil: 'networkidle2' });
+    const pageTitle = 'Resume';
+    
+    await page.evaluate((title) => {
+      document.title = title;
+    }, pageTitle);
 
     // Generate PDF with A4 size and print background
     const pdf = await page.pdf({

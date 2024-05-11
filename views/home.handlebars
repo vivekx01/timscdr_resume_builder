@@ -1,376 +1,384 @@
 <div class="main h-full flex flex-cols">
     {{! Editor }}
     <div class="left-side basis-4/12 bg-black text-white overflow-auto">
-        <div class="left-section-heading">
-            <h1 class="text-md font-bold text-center">RESUME EDITOR</h1>
+        <div class="left-section-heading mb-3">
+            <h1 class="text-md font-bold text-center mt-3">TIMSCDR RESUME BUILDER</h1>
         </div>
 
         <div class="editor-pane">
-            <div class="basic-information space-y-2">
-                <h1 class="text-md font-semibold">Basic Information</h1>
-                <div>
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" class="editor-field text-black" data-target="#preview-name"
-                        placeholder="Enter your Name" />
-                </div>
-                <div>
-                    <label for="batch">MCA Batch:</label>
-                    <input type="text" id="name" class="editor-field text-black" data-target="#preview-batch"
-                        placeholder="Enter your MCA Batch" />
-                </div>
-                <div>
-                    <label for="photo">Upload Photo:</label>
-                    <input type="file" id="fileInput" accept="image/*">
-                </div>
-            </div>
-            <div class="left-editor space-y-2">
-                <h1 class="text-md font-semibold mt-2 ml-3">Resume Left Section</h1>
-                <div id="accordion-color" data-accordion="collapse"
-                    data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
-                    <h2 id="accordion-color-heading-1">
-                        <button type="button"
-                            class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-1" aria-expanded="true"
-                            aria-controls="accordion-color-body-1">
-                            <span>About Me</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
-                        <div
-                            class="p-5 space-y-3 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                            <div>
-                                <label for="dob">Date of Birth:</label>
-                                <input type="text" id="dob" class="editor-field text-black" data-target="#preview-dob"
-                                    placeholder="Enter your Date of Birth" />
-                            </div>
-
-                            <div>
-                                <label for="dob">Age:</label>
-                                <input type="text" id="age" class="editor-field text-black" data-target="#preview-age"
-                                    placeholder="Enter your Age" />
-                            </div>
-
-                            <div>
-                                <label for="dob">Gender:</label>
-                                <input type="text" id="gender" class="editor-field text-black"
-                                    data-target="#preview-gender" placeholder="Enter your Gender" />
-                            </div>
-
-                            <div>
-                                <label for="dob">Birth Place:</label>
-                                <input type="text" id="birth-place" class="editor-field text-black"
-                                    data-target="#preview-birth-place" placeholder="Enter your birth place" />
-                            </div>
-                        </div>
+            <h2 id="accordion-color-heading-0">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-0" aria-expanded="true"
+                    aria-controls="accordion-color-body-1">
+                    <span>Basic Information</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-0" class="hidden" aria-labelledby="accordion-color-heading-1">
+                <div class="p-5 space-y-3 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                    <div>
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" class="editor-field text-black" data-target="#preview-name"
+                            placeholder="Enter your Name" />
                     </div>
-
-                    <h2 id="accordion-color-heading-2">
-                        <button type="button"
-                            class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-2" aria-expanded="false"
-                            aria-controls="accordion-color-body-2">
-                            <span>Contact</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
-                        <div
-                            class="p-5 space-y-3 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                            <div>
-                                <label for="dob">Address:</label>
-                                <input type="text" id="address" class="editor-field text-black"
-                                    data-target="#preview-address" placeholder="Enter your address" />
-                            </div>
-
-                            <div>
-                                <label for="dob">Phone:</label>
-                                <input type="text" id="phone" class="editor-field text-black"
-                                    data-target="#preview-phone" placeholder="Enter your phone number" />
-                            </div>
-
-                            <div>
-                                <label for="dob">Email:</label>
-                                <input type="text" id="email" class="editor-field text-black"
-                                    data-target="#preview-email" placeholder="Enter your email" />
-                            </div>
-
-                            <div>
-                                <label for="dob">Linkedin:</label>
-                                <input type="text" id="linkedin" class="editor-field text-black"
-                                    data-target="#preview-linkedin" placeholder="Enter your linkedin" />
-                            </div>
-                            <div>
-                                <label for="dob">Github:</label>
-                                <input type="text" id="github" class="editor-field text-black"
-                                    data-target="#preview-github" placeholder="Enter your github" />
-                            </div>
-                        </div>
+                    <div>
+                        <label for="batch">MCA Batch:</label>
+                        <input type="text" id="name" class="editor-field text-black" data-target="#preview-batch"
+                            placeholder="Enter your MCA Batch" />
                     </div>
-
-                    <h2 id="accordion-color-heading-3">
-                        <button type="button"
-                            class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-3" aria-expanded="false"
-                            aria-controls="accordion-color-body-3">
-                            <span>Interests</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-2">
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                                conceptualized and designed using the Figma software so
-                                everything you see in the library has a design equivalent in our
-                                Figma file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the
-                                <a href="https://flowbite.com/figma/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based on the utility classes from Tailwind CSS and components
-                                from Flowbite.
-                            </p>
-                        </div>
-                    </div>
-
-                    <h2 id="accordion-color-heading-4">
-                        <button type="button"
-                            class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-4" aria-expanded="false"
-                            aria-controls="accordion-color-body-4">
-                            <span>Languages Known</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-2">
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                                conceptualized and designed using the Figma software so
-                                everything you see in the library has a design equivalent in our
-                                Figma file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the
-                                <a href="https://flowbite.com/figma/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based on the utility classes from Tailwind CSS and components
-                                from Flowbite.
-                            </p>
-                        </div>
-                    </div>
-
-                    <h2 id="accordion-color-heading-5">
-                        <button type="button"
-                            class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-5" aria-expanded="false"
-                            aria-controls="accordion-color-body-2">
-                            <span>Technical Skills</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-2">
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                                conceptualized and designed using the Figma software so
-                                everything you see in the library has a design equivalent in our
-                                Figma file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the
-                                <a href="https://flowbite.com/figma/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based on the utility classes from Tailwind CSS and components
-                                from Flowbite.
-                            </p>
-                        </div>
+                    <div>
+                        <label for="photo">Upload Photo:</label>
+                        <input type="file" id="fileInput" accept="image/*">
                     </div>
                 </div>
             </div>
-            <div class="right-editor space-y-2">
-                <h1 class="text-md font-semibold mt-2 ml-3">Resume Right Section</h1>
-                <div id="accordion-color" data-accordion="collapse"
-                    data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
-                    <h2 id="accordion-color-heading-1">
-                        <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-1" aria-expanded="true"
-                            aria-controls="accordion-color-body-1">
-                            <span>Education</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an
-                                open-source library of interactive components built on top of
-                                Tailwind CSS including buttons, dropdowns, modals, navbars, and
-                                more.
-                            </p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out this guide
-                                to learn how to
-                                <a href="/docs/getting-started/introduction/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">get started</a>
-                                and start developing websites even faster with components on top
-                                of Tailwind CSS.
-                            </p>
-                        </div>
+
+            <h2 id="accordion-color-heading-1">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-1" aria-expanded="true"
+                    aria-controls="accordion-color-body-1">
+                    <span>About Me</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
+                <div class="p-5 space-y-3 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                    <div>
+                        <label for="dob">Date of Birth:</label>
+                        <input type="text" id="dob" class="editor-field text-black" data-target="#preview-dob"
+                            placeholder="Enter your Date of Birth" />
                     </div>
-                    <h2 id="accordion-color-heading-2">
-                        <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-2" aria-expanded="false"
-                            aria-controls="accordion-color-body-2">
-                            <span>HSC & SSC</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                                conceptualized and designed using the Figma software so
-                                everything you see in the library has a design equivalent in our
-                                Figma file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the
-                                <a href="https://flowbite.com/figma/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based on the utility classes from Tailwind CSS and components
-                                from Flowbite.
-                            </p>
-                        </div>
+
+                    <div>
+                        <label for="dob">Age:</label>
+                        <input type="text" id="age" class="editor-field text-black" data-target="#preview-age"
+                            placeholder="Enter your Age" />
                     </div>
-                    <h2 id="accordion-color-heading-2">
-                        <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-2" aria-expanded="false"
-                            aria-controls="accordion-color-body-2">
-                            <span>Projects Undertaken</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                                conceptualized and designed using the Figma software so
-                                everything you see in the library has a design equivalent in our
-                                Figma file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the
-                                <a href="https://flowbite.com/figma/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based on the utility classes from Tailwind CSS and components
-                                from Flowbite.
-                            </p>
-                        </div>
+
+                    <div>
+                        <label for="dob">Gender:</label>
+                        <input type="text" id="gender" class="editor-field text-black" data-target="#preview-gender"
+                            placeholder="Enter your Gender" />
                     </div>
-                    <h2 id="accordion-color-heading-2">
-                        <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-2" aria-expanded="false"
-                            aria-controls="accordion-color-body-2">
-                            <span>Fundamentals Known</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                                conceptualized and designed using the Figma software so
-                                everything you see in the library has a design equivalent in our
-                                Figma file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the
-                                <a href="https://flowbite.com/figma/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based on the utility classes from Tailwind CSS and components
-                                from Flowbite.
-                            </p>
-                        </div>
-                    </div>
-                    <h2 id="accordion-color-heading-2">
-                        <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-2" aria-expanded="false"
-                            aria-controls="accordion-color-body-2">
-                            <span>Certifications</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                                conceptualized and designed using the Figma software so
-                                everything you see in the library has a design equivalent in our
-                                Figma file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the
-                                <a href="https://flowbite.com/figma/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based on the utility classes from Tailwind CSS and components
-                                from Flowbite.
-                            </p>
-                        </div>
-                    </div>
-                    <h2 id="accordion-color-heading-2">
-                        <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                            data-accordion-target="#accordion-color-body-2" aria-expanded="false"
-                            aria-controls="accordion-color-body-2">
-                            <span>Extra-Curricular Activities</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                                conceptualized and designed using the Figma software so
-                                everything you see in the library has a design equivalent in our
-                                Figma file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the
-                                <a href="https://flowbite.com/figma/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based on the utility classes from Tailwind CSS and components
-                                from Flowbite.
-                            </p>
-                        </div>
+
+                    <div>
+                        <label for="dob">Birth Place:</label>
+                        <input type="text" id="birth-place" class="editor-field text-black"
+                            data-target="#preview-birth-place" placeholder="Enter your birth place" />
                     </div>
                 </div>
             </div>
+
+            <h2 id="accordion-color-heading-2">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-2" aria-expanded="false"
+                    aria-controls="accordion-color-body-2">
+                    <span>Contact</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
+                <div class="p-5 space-y-3 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                    <div>
+                        <label for="dob">Address:</label>
+                        <input type="text" id="address" class="editor-field text-black" data-target="#preview-address"
+                            placeholder="Enter your address" />
+                    </div>
+
+                    <div>
+                        <label for="dob">Phone:</label>
+                        <input type="text" id="phone" class="editor-field text-black" data-target="#preview-phone"
+                            placeholder="Enter your phone number" />
+                    </div>
+
+                    <div>
+                        <label for="dob">Email:</label>
+                        <input type="text" id="email" class="editor-field text-black" data-target="#preview-email"
+                            placeholder="Enter your email" />
+                    </div>
+
+                    <div>
+                        <label for="dob">Linkedin:</label>
+                        <input type="text" id="linkedin" class="editor-field text-black" data-target="#preview-linkedin"
+                            placeholder="Enter your linkedin" />
+                    </div>
+                    <div>
+                        <label for="dob">Github:</label>
+                        <input type="text" id="github" class="editor-field text-black" data-target="#preview-github"
+                            placeholder="Enter your github" />
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="accordion-color-heading-3">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-3" aria-expanded="false"
+                    aria-controls="accordion-color-body-3">
+                    <span>Interests</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                        conceptualized and designed using the Figma software so
+                        everything you see in the library has a design equivalent in our
+                        Figma file.</p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out the
+                        <a href="https://flowbite.com/figma/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
+                        based on the utility classes from Tailwind CSS and components
+                        from Flowbite.
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="accordion-color-heading-4">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-4" aria-expanded="false"
+                    aria-controls="accordion-color-body-4">
+                    <span>Languages Known</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                        conceptualized and designed using the Figma software so
+                        everything you see in the library has a design equivalent in our
+                        Figma file.</p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out the
+                        <a href="https://flowbite.com/figma/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
+                        based on the utility classes from Tailwind CSS and components
+                        from Flowbite.
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="accordion-color-heading-5">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-5" aria-expanded="false"
+                    aria-controls="accordion-color-body-2">
+                    <span>Technical Skills</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                        conceptualized and designed using the Figma software so
+                        everything you see in the library has a design equivalent in our
+                        Figma file.</p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out the
+                        <a href="https://flowbite.com/figma/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
+                        based on the utility classes from Tailwind CSS and components
+                        from Flowbite.
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="accordion-color-heading-6">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-6" aria-expanded="true"
+                    aria-controls="accordion-color-body-1">
+                    <span>Education</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-6" class="hidden" aria-labelledby="accordion-color-heading-1">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an
+                        open-source library of interactive components built on top of
+                        Tailwind CSS including buttons, dropdowns, modals, navbars, and
+                        more.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out this guide
+                        to learn how to
+                        <a href="/docs/getting-started/introduction/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">get started</a>
+                        and start developing websites even faster with components on top
+                        of Tailwind CSS.
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="accordion-color-heading-7">
+                <button type="button"
+                    class=" accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-7" aria-expanded="false"
+                    aria-controls="accordion-color-body-2">
+                    <span>HSC & SSC</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-7" class="hidden" aria-labelledby="accordion-color-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                        conceptualized and designed using the Figma software so
+                        everything you see in the library has a design equivalent in our
+                        Figma file.</p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out the
+                        <a href="https://flowbite.com/figma/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
+                        based on the utility classes from Tailwind CSS and components
+                        from Flowbite.
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="accordion-color-heading-8">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-8" aria-expanded="false"
+                    aria-controls="accordion-color-body-2">
+                    <span>Projects Undertaken</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-8" class="hidden" aria-labelledby="accordion-color-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                        conceptualized and designed using the Figma software so
+                        everything you see in the library has a design equivalent in our
+                        Figma file.</p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out the
+                        <a href="https://flowbite.com/figma/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
+                        based on the utility classes from Tailwind CSS and components
+                        from Flowbite.
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="accordion-color-heading-9">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-9" aria-expanded="false"
+                    aria-controls="accordion-color-body-2">
+                    <span>Fundamentals Known</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-9" class="hidden" aria-labelledby="accordion-color-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                        conceptualized and designed using the Figma software so
+                        everything you see in the library has a design equivalent in our
+                        Figma file.</p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out the
+                        <a href="https://flowbite.com/figma/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
+                        based on the utility classes from Tailwind CSS and components
+                        from Flowbite.
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="accordion-color-heading-10">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-10" aria-expanded="false"
+                    aria-controls="accordion-color-body-2">
+                    <span>Certifications</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-10" class="hidden" aria-labelledby="accordion-color-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                        conceptualized and designed using the Figma software so
+                        everything you see in the library has a design equivalent in our
+                        Figma file.</p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out the
+                        <a href="https://flowbite.com/figma/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
+                        based on the utility classes from Tailwind CSS and components
+                        from Flowbite.
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="accordion-color-heading-11">
+                <button type="button"
+                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-11" aria-expanded="false"
+                    aria-controls="accordion-color-body-2">
+                    <span>Extra-Curricular Activities</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-11" class="hidden" aria-labelledby="accordion-color-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                        conceptualized and designed using the Figma software so
+                        everything you see in the library has a design equivalent in our
+                        Figma file.</p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out the
+                        <a href="https://flowbite.com/figma/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
+                        based on the utility classes from Tailwind CSS and components
+                        from Flowbite.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </div>
     {{! Preview }}
@@ -417,7 +425,8 @@
                         <img class="mt-4" src="http://localhost:6868/images/timscdr_logo.png" alt="Timscdr Logo"
                             height="150px" width="150px" />
                     </div>
-                    <img id="preview-photo" class="object-cover clip-hexagon w-40 h-38 overflow-hidden absolute left-1/2 -translate-x-1/2 top-[168px]"
+                    <img id="preview-photo"
+                        class="object-cover clip-hexagon w-40 h-38 overflow-hidden absolute left-1/2 -translate-x-1/2 top-[168px]"
                         src="http://localhost:6868/images/display_photo.jpg" alt="student photo" />
                     <div class="basis-[77%] bg-[#303c54] flex flex-col items-center">
                         <div class="resume-left-content text-white mt-[100px] flex flex-col h-[100%] w-[100%]">

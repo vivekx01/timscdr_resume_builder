@@ -139,17 +139,18 @@
                 </button>
             </h2>
             <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-2">
-                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                        conceptualized and designed using the Figma software so
-                        everything you see in the library has a design equivalent in our
-                        Figma file.</p>
-                    <p class="text-gray-500 dark:text-gray-400">Check out the
-                        <a href="https://flowbite.com/figma/"
-                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                        based on the utility classes from Tailwind CSS and components
-                        from Flowbite.
-                    </p>
+                <div class="p-5 border space-y-3 border-b-0 border-gray-200 dark:border-gray-700">
+                    <div>
+                        <label for="interest">Interest 1:</label>
+                        <input type="text" id="interest1" class="editor-field text-black" data-target="#preview-interest1"
+                            placeholder="Enter your Interest" />
+                    </div>
+
+                    <div>
+                        <label for="interest">Interest 2:</label>
+                        <input type="text" id="interest2" class="editor-field text-black" data-target="#preview-interest2"
+                            placeholder="Enter your Interest" />
+                    </div>
                 </div>
             </div>
 
@@ -167,17 +168,18 @@
                 </button>
             </h2>
             <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-2">
-                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                        conceptualized and designed using the Figma software so
-                        everything you see in the library has a design equivalent in our
-                        Figma file.</p>
-                    <p class="text-gray-500 dark:text-gray-400">Check out the
-                        <a href="https://flowbite.com/figma/"
-                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                        based on the utility classes from Tailwind CSS and components
-                        from Flowbite.
-                    </p>
+                <div class="p-5 border space-y-3 border-b-0 border-gray-200 dark:border-gray-700">
+                    <div>
+                        <label for="language">Interest 1:</label>
+                        <input type="text" id="language1" class="editor-field text-black" data-target="#preview-language1"
+                            placeholder="Enter your language" />
+                    </div>
+
+                    <div>
+                        <label for="language">Interest 2:</label>
+                        <input type="text" id="language2" class="editor-field text-black" data-target="#preview-language2"
+                            placeholder="Enter your language" />
+                    </div>
                 </div>
             </div>
 
@@ -381,6 +383,7 @@
 
         </div>
     </div>
+
     {{! Preview }}
     <div class="right-side basis-8/12 bg-gray-200 overflow-auto">
         <div class="right-upper-bar bg-[#303c54] text-white flex">
@@ -495,8 +498,8 @@
                                     <h1 class="text-sm font-semibold inline-block border-b-2 border-white">INTERESTS
                                     </h1>
                                     <div class="section-details mt-2 space-y-2">
-                                        <li class="text-[0.6rem]">Watching anime</li>
-                                        <li class="text-[0.6rem]">Exploring New Tech</li>
+                                        <li class="text-[0.6rem]" id="preview-interest1">Watching anime</li>
+                                        <li class="text-[0.6rem]" id="preview-interest2">Exploring New Tech</li>
                                     </div>
                                 </div>
                             </div>
@@ -505,8 +508,8 @@
                                     <h1 class="text-sm font-semibold inline-block border-b-2 border-white">LANGUAGES
                                         KNOWN</h1>
                                     <div class="section-details mt-2 space-y-2">
-                                        <li class="text-[0.6rem]">English</li>
-                                        <li class="text-[0.6rem]">Hindi</li>
+                                        <li class="text-[0.6rem]" id="preview-language1">English</li>
+                                        <li class="text-[0.6rem]" id="preview-language2">Hindi</li>
                                     </div>
                                 </div>
                             </div>

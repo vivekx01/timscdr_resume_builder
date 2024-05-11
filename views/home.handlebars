@@ -1,11 +1,28 @@
 <div class="main h-full flex flex-cols">
-    {{!-- Editor --}}
+    {{! Editor }}
     <div class="left-side basis-4/12 bg-black text-white overflow-auto">
-        <div class="left-section-heading  ">
+        <div class="left-section-heading">
             <h1 class="text-md font-bold text-center">RESUME EDITOR</h1>
         </div>
 
         <div class="editor-pane">
+            <div class="basic-information space-y-2">
+                <h1 class="text-md font-semibold">Basic Information</h1>
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" class="editor-field text-black" data-target="#preview-name"
+                        placeholder="Enter your Name" />
+                </div>
+                <div>
+                    <label for="batch">MCA Batch:</label>
+                    <input type="text" id="name" class="editor-field text-black" data-target="#preview-batch"
+                        placeholder="Enter your MCA Batch" />
+                </div>
+                <div>
+                    <label for="photo">Upload Photo:</label>
+                    <input type="file" id="fileInput" accept="image/*">
+                </div>
+            </div>
             <div class="left-editor space-y-2">
                 <h1 class="text-md font-semibold mt-2 ml-3">Resume Left Section</h1>
                 <div id="accordion-color" data-accordion="collapse"
@@ -24,29 +41,30 @@
                         </button>
                     </h2>
                     <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
-                        <div class="p-5 space-y-3 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                        <div
+                            class="p-5 space-y-3 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                             <div>
                                 <label for="dob">Date of Birth:</label>
-                            <input type="text" id="dob" class="editor-field text-black" data-target="#preview-dob"
-                                placeholder="Enter your Date of Birth" />
+                                <input type="text" id="dob" class="editor-field text-black" data-target="#preview-dob"
+                                    placeholder="Enter your Date of Birth" />
                             </div>
 
                             <div>
                                 <label for="dob">Age:</label>
-                            <input type="text" id="age" class="editor-field text-black" data-target="#preview-age"
-                                placeholder="Enter your Age" />
+                                <input type="text" id="age" class="editor-field text-black" data-target="#preview-age"
+                                    placeholder="Enter your Age" />
                             </div>
 
                             <div>
                                 <label for="dob">Gender:</label>
-                            <input type="text" id="gender" class="editor-field text-black" data-target="#preview-gender"
-                                placeholder="Enter your Gender" />
+                                <input type="text" id="gender" class="editor-field text-black"
+                                    data-target="#preview-gender" placeholder="Enter your Gender" />
                             </div>
 
                             <div>
                                 <label for="dob">Birth Place:</label>
-                            <input type="text" id="birth-place" class="editor-field text-black" data-target="#preview-birth-place"
-                                placeholder="Enter your birth place" />
+                                <input type="text" id="birth-place" class="editor-field text-black"
+                                    data-target="#preview-birth-place" placeholder="Enter your birth place" />
                             </div>
                         </div>
                     </div>
@@ -65,34 +83,35 @@
                         </button>
                     </h2>
                     <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
-                        <div class="p-5 space-y-3 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                        <div
+                            class="p-5 space-y-3 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                             <div>
                                 <label for="dob">Address:</label>
-                            <input type="text" id="address" class="editor-field text-black" data-target="#preview-address"
-                                placeholder="Enter your address" />
+                                <input type="text" id="address" class="editor-field text-black"
+                                    data-target="#preview-address" placeholder="Enter your address" />
                             </div>
 
                             <div>
                                 <label for="dob">Phone:</label>
-                            <input type="text" id="phone" class="editor-field text-black" data-target="#preview-phone"
-                                placeholder="Enter your phone number" />
+                                <input type="text" id="phone" class="editor-field text-black"
+                                    data-target="#preview-phone" placeholder="Enter your phone number" />
                             </div>
 
                             <div>
                                 <label for="dob">Email:</label>
-                            <input type="text" id="email" class="editor-field text-black" data-target="#preview-email"
-                                placeholder="Enter your email" />
+                                <input type="text" id="email" class="editor-field text-black"
+                                    data-target="#preview-email" placeholder="Enter your email" />
                             </div>
 
                             <div>
                                 <label for="dob">Linkedin:</label>
-                            <input type="text" id="linkedin" class="editor-field text-black" data-target="#preview-linkedin"
-                                placeholder="Enter your linkedin" />
+                                <input type="text" id="linkedin" class="editor-field text-black"
+                                    data-target="#preview-linkedin" placeholder="Enter your linkedin" />
                             </div>
                             <div>
                                 <label for="dob">Github:</label>
-                            <input type="text" id="github" class="editor-field text-black" data-target="#preview-github"
-                                placeholder="Enter your github" />
+                                <input type="text" id="github" class="editor-field text-black"
+                                    data-target="#preview-github" placeholder="Enter your github" />
                             </div>
                         </div>
                     </div>
@@ -112,18 +131,16 @@
                     </h2>
                     <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-2">
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and
-                                designed
-                                using
-                                the Figma software so everything you see in the library has a design equivalent in our
-                                Figma
-                                file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                    href="https://flowbite.com/figma/"
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                                conceptualized and designed using the Figma software so
+                                everything you see in the library has a design equivalent in our
+                                Figma file.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Check out the
+                                <a href="https://flowbite.com/figma/"
                                     class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based
-                                on
-                                the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                based on the utility classes from Tailwind CSS and components
+                                from Flowbite.
+                            </p>
                         </div>
                     </div>
 
@@ -142,18 +159,16 @@
                     </h2>
                     <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-2">
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and
-                                designed
-                                using
-                                the Figma software so everything you see in the library has a design equivalent in our
-                                Figma
-                                file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                    href="https://flowbite.com/figma/"
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                                conceptualized and designed using the Figma software so
+                                everything you see in the library has a design equivalent in our
+                                Figma file.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Check out the
+                                <a href="https://flowbite.com/figma/"
                                     class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based
-                                on
-                                the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                based on the utility classes from Tailwind CSS and components
+                                from Flowbite.
+                            </p>
                         </div>
                     </div>
 
@@ -172,18 +187,16 @@
                     </h2>
                     <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-2">
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and
-                                designed
-                                using
-                                the Figma software so everything you see in the library has a design equivalent in our
-                                Figma
-                                file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                    href="https://flowbite.com/figma/"
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                                conceptualized and designed using the Figma software so
+                                everything you see in the library has a design equivalent in our
+                                Figma file.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Check out the
+                                <a href="https://flowbite.com/figma/"
                                     class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based
-                                on
-                                the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                based on the utility classes from Tailwind CSS and components
+                                from Flowbite.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -207,16 +220,18 @@
                     </h2>
                     <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of
-                                interactive
-                                components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars,
-                                and
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an
+                                open-source library of interactive components built on top of
+                                Tailwind CSS including buttons, dropdowns, modals, navbars, and
                                 more.
                             </p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
-                                    href="/docs/getting-started/introduction/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start
-                                developing websites even faster with components on top of Tailwind CSS.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Check out this guide
+                                to learn how to
+                                <a href="/docs/getting-started/introduction/"
+                                    class="text-blue-600 dark:text-blue-500 hover:underline">get started</a>
+                                and start developing websites even faster with components on top
+                                of Tailwind CSS.
+                            </p>
                         </div>
                     </div>
                     <h2 id="accordion-color-heading-2">
@@ -234,18 +249,16 @@
                     </h2>
                     <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and
-                                designed
-                                using
-                                the Figma software so everything you see in the library has a design equivalent in our
-                                Figma
-                                file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                    href="https://flowbite.com/figma/"
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                                conceptualized and designed using the Figma software so
+                                everything you see in the library has a design equivalent in our
+                                Figma file.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Check out the
+                                <a href="https://flowbite.com/figma/"
                                     class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based
-                                on
-                                the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                based on the utility classes from Tailwind CSS and components
+                                from Flowbite.
+                            </p>
                         </div>
                     </div>
                     <h2 id="accordion-color-heading-2">
@@ -263,18 +276,16 @@
                     </h2>
                     <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and
-                                designed
-                                using
-                                the Figma software so everything you see in the library has a design equivalent in our
-                                Figma
-                                file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                    href="https://flowbite.com/figma/"
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                                conceptualized and designed using the Figma software so
+                                everything you see in the library has a design equivalent in our
+                                Figma file.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Check out the
+                                <a href="https://flowbite.com/figma/"
                                     class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based
-                                on
-                                the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                based on the utility classes from Tailwind CSS and components
+                                from Flowbite.
+                            </p>
                         </div>
                     </div>
                     <h2 id="accordion-color-heading-2">
@@ -292,18 +303,16 @@
                     </h2>
                     <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and
-                                designed
-                                using
-                                the Figma software so everything you see in the library has a design equivalent in our
-                                Figma
-                                file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                    href="https://flowbite.com/figma/"
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                                conceptualized and designed using the Figma software so
+                                everything you see in the library has a design equivalent in our
+                                Figma file.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Check out the
+                                <a href="https://flowbite.com/figma/"
                                     class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based
-                                on
-                                the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                based on the utility classes from Tailwind CSS and components
+                                from Flowbite.
+                            </p>
                         </div>
                     </div>
                     <h2 id="accordion-color-heading-2">
@@ -321,18 +330,16 @@
                     </h2>
                     <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and
-                                designed
-                                using
-                                the Figma software so everything you see in the library has a design equivalent in our
-                                Figma
-                                file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                    href="https://flowbite.com/figma/"
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                                conceptualized and designed using the Figma software so
+                                everything you see in the library has a design equivalent in our
+                                Figma file.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Check out the
+                                <a href="https://flowbite.com/figma/"
                                     class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based
-                                on
-                                the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                based on the utility classes from Tailwind CSS and components
+                                from Flowbite.
+                            </p>
                         </div>
                     </div>
                     <h2 id="accordion-color-heading-2">
@@ -350,41 +357,39 @@
                     </h2>
                     <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and
-                                designed
-                                using
-                                the Figma software so everything you see in the library has a design equivalent in our
-                                Figma
-                                file.</p>
-                            <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                    href="https://flowbite.com/figma/"
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
+                                conceptualized and designed using the Figma software so
+                                everything you see in the library has a design equivalent in our
+                                Figma file.</p>
+                            <p class="text-gray-500 dark:text-gray-400">Check out the
+                                <a href="https://flowbite.com/figma/"
                                     class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                based
-                                on
-                                the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                based on the utility classes from Tailwind CSS and components
+                                from Flowbite.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {{!-- Preview --}}
+    {{! Preview }}
     <div class="right-side basis-8/12 bg-gray-200 overflow-auto">
-        <div class="right-upper-bar bg-[#303c54] text-white flex ">
+        <div class="right-upper-bar bg-[#303c54] text-white flex">
             <h1 class="basis-[45%] text-lg font-bold ml-5">RESUME PREVIEW</h1>
 
             <div id="report-bug"
-                class=" basis-[20%] action-buttons bg-red-500 text-white text-center flex justify-center items-center cursor-pointer">
+                class="basis-[20%] action-buttons bg-red-500 text-white text-center flex justify-center items-center cursor-pointer">
                 <span><i class="fa-solid fa-bug mr-1"></i></span>
                 Report a bug
             </div>
             <div id="github"
-                class=" basis-[20%] action-buttons bg-black text-white text-center flex justify-center items-center cursor-pointer">
+                class="basis-[20%] action-buttons bg-black text-white text-center flex justify-center items-center cursor-pointer">
                 <span><i class="fa-brands fa-github mr-2"></i></span>
                 <a href="https://github.com/vivekx01/timscdr_resume_builder" target="_blank">Source code</a>
             </div>
             <div
-                class=" basis-[15%] action-buttons bg-green-500 text-white text-center flex flex-col justify-center items-center">
+                class="basis-[15%] action-buttons bg-green-500 text-white text-center flex flex-col justify-center items-center">
                 <div id="download-loader" class="loader hide"></div>
                 <div id="generate-pdf-btn" class="cursor-pointer">
                     <span><i class="fa-solid fa-download"></i></span>
@@ -394,78 +399,82 @@
         </div>
         <div class="resume-container mt-2 mb-5 flex items-center justify-center">
             <div class="a4-page w-[794px] h-[1123px] bg-white border border-grey-400 shadow-lg flex">
-                {{!-- Dependencies --}}
+                {{! Dependencies }}
                 <script src="https://cdn.tailwindcss.com"></script>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
                     crossorigin="anonymous" referrerpolicy="no-referrer" />
-                {{!-- Css for clip hexagon --}}
+                {{! Css for clip hexagon }}
                 <style>
                     .clip-hexagon {
-                        clip-path: polygon(25% 0%,
-                                75% 0%,
-                                100% 50%,
-                                75% 100%,
-                                25% 100%,
-                                0% 50%);
+                        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%,
+                                25% 100%, 0% 50%);
                     }
                 </style>
-                {{!-- Resume Left --}}
+                {{! Resume Left }}
                 <div class="resume-left relative basis-4/12 text-white flex flex-col">
                     <div class="bg-white text-black basis-[23%] flex flex-col items-center">
                         <img class="mt-4" src="http://localhost:6868/images/timscdr_logo.png" alt="Timscdr Logo"
                             height="150px" width="150px" />
                     </div>
-                    <img class="clip-hexagon w-40 h-38 overflow-hidden absolute left-1/2 -translate-x-1/2 top-[168px]"
+                    <img id="preview-photo" class="object-cover clip-hexagon w-40 h-38 overflow-hidden absolute left-1/2 -translate-x-1/2 top-[168px]"
                         src="http://localhost:6868/images/display_photo.jpg" alt="student photo" />
                     <div class="basis-[77%] bg-[#303c54] flex flex-col items-center">
                         <div class="resume-left-content text-white mt-[100px] flex flex-col h-[100%] w-[100%]">
                             <div class="section-1 basis-[15%] text-white">
                                 <div class="section-container ml-5">
-                                    <h1 class='text-sm font-semibold inline-block border-b-2 border-white'>ABOUT ME</h1>
+                                    <h1 class="text-sm font-semibold inline-block border-b-2 border-white">ABOUT ME</h1>
                                     <div class="section-details mt-2">
-                                        <p class='text-[0.6rem]'>Date of Birth: <span id="preview-dob">14/08/2001</span>
+                                        <p class="text-[0.6rem]">Date of Birth:
+                                            <span id="preview-dob">14/08/2001</span>
                                         </p>
-                                        <p class='text-[0.6rem]'>Age: <span id="preview-age">22</span></p>
-                                        <p class='text-[0.6rem]'>Gender: <span id="preview-gender">Male</span></p>
-                                        <p class='text-[0.6rem]'>Birth Place: <span id="preview-birth-place">Mumbai</span></p>
+                                        <p class="text-[0.6rem]">Age:
+                                            <span id="preview-age">22</span>
+                                        </p>
+                                        <p class="text-[0.6rem]">Gender:
+                                            <span id="preview-gender">Male</span>
+                                        </p>
+                                        <p class="text-[0.6rem]">Birth Place:
+                                            <span id="preview-birth-place">Mumbai</span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="section-2 basis-[22%]">
                                 <div class="section-container ml-5">
-                                    <h1 class='text-sm font-semibold inline-block border-b-2 border-white'>CONTACT</h1>
+                                    <h1 class="text-sm font-semibold inline-block border-b-2 border-white">CONTACT</h1>
                                     <div class="section-details mt-2 space-y-1">
                                         <div class="location flex space-x-2">
                                             <span><i class="fa-solid fa-location-dot"></i> </span>
-                                            <p class='text-[0.6rem] flex justify-center items-center'>
-                                                <span id="preview-address">H/200, Janta Colony, Navneet Chowk, Worli Village, Mumbai - 400030</span>
+                                            <p class="text-[0.6rem] flex justify-center items-center">
+                                                <span id="preview-address">H/200, Janta Colony, Navneet
+                                                    Chowk, Worli Village, Mumbai - 400030</span>
                                             </p>
                                         </div>
                                         <div class="mobile flex space-x-2">
                                             <span><i class="fa-solid fa-phone"></i> </span>
-                                            <p class='text-[0.6rem] flex justify-center items-center' >
+                                            <p class="text-[0.6rem] flex justify-center items-center">
                                                 +91
                                                 <span id="preview-phone">9619037203</span>
                                             </p>
                                         </div>
                                         <div class="email flex space-x-2">
                                             <span><i class="fa-solid fa-envelope"></i> </span>
-                                            <p class='text-[0.6rem] flex justify-center items-center' >
+                                            <p class="text-[0.6rem] flex justify-center items-center">
                                                 <span id="preview-email">viveks95944@gmail.com</span>
                                             </p>
                                         </div>
                                         <div class="linkedin flex space-x-2">
                                             <span><i class="fa-brands fa-linkedin"></i> </span>
-                                            <a class='text-[0.6rem] flex justify-center items-center' 
-                                                href='https://www.linkedin.com/in/vivekx01/'>
+                                            <a class="text-[0.6rem] flex justify-center items-center"
+                                                href="https://www.linkedin.com/in/vivekx01/">
                                                 <span id="preview-linkedin">https://www.linkedin.com/in/vivekx01/</span>
                                             </a>
                                         </div>
                                         <div class="github flex space-x-2">
                                             <span><i class="fa-brands fa-github"></i> </span>
-                                            <a class='text-[0.6rem] flex justify-center items-center' 
-                                                href='https://github.com/vivekx01'>
+                                            <a class="text-[0.6rem] flex justify-center items-center"
+                                                href="https://github.com/vivekx01">
                                                 <span id="preview-github">https://github.com/vivekx01</span>
                                             </a>
                                         </div>
@@ -474,46 +483,46 @@
                             </div>
                             <div class="section-3 basis-[10%]">
                                 <div class="section-container ml-5">
-                                    <h1 class='text-sm font-semibold inline-block border-b-2 border-white'>INTERESTS
+                                    <h1 class="text-sm font-semibold inline-block border-b-2 border-white">INTERESTS
                                     </h1>
                                     <div class="section-details mt-2 space-y-2">
-                                        <li class='text-[0.6rem]'>Watching anime</li>
-                                        <li class='text-[0.6rem]'>Exploring New Tech</li>
+                                        <li class="text-[0.6rem]">Watching anime</li>
+                                        <li class="text-[0.6rem]">Exploring New Tech</li>
                                     </div>
                                 </div>
                             </div>
                             <div class="section-4 basis-[10%]">
                                 <div class="section-container ml-5">
-                                    <h1 class='text-sm font-semibold inline-block border-b-2 border-white'>LANGUAGES
+                                    <h1 class="text-sm font-semibold inline-block border-b-2 border-white">LANGUAGES
                                         KNOWN</h1>
                                     <div class="section-details mt-2 space-y-2">
-                                        <li class='text-[0.6rem]'>English</li>
-                                        <li class='text-[0.6rem]'>Hindi</li>
+                                        <li class="text-[0.6rem]">English</li>
+                                        <li class="text-[0.6rem]">Hindi</li>
                                     </div>
                                 </div>
                             </div>
                             <div class="section-5 basis-[40%]">
                                 <div class="section-container ml-5">
-                                    <h1 class='text-sm font-semibold inline-block border-b-2 border-white'>TECHNICAL
+                                    <h1 class="text-sm font-semibold inline-block border-b-2 border-white">TECHNICAL
                                         SKILLS</h1>
-                                    <div class="section-details mt-2 ">
+                                    <div class="section-details mt-2">
                                         <div class="programming-languages space-y-2">
-                                            <h2 class='text-[0.6rem]'>Programming Languages:</h2>
-                                            <li class='text-[0.6rem]'>Javascript/TypeScript</li>
-                                            <li class='text-[0.6rem]'>Python</li>
+                                            <h2 class="text-[0.6rem]">Programming Languages:</h2>
+                                            <li class="text-[0.6rem]">Javascript/TypeScript</li>
+                                            <li class="text-[0.6rem]">Python</li>
                                         </div>
 
                                         <div class="databases mt-5 space-y-2">
-                                            <h2 class='text-[0.6rem]'>Databases:</h2>
-                                            <li class='text-[0.6rem]'>PostgreSQL</li>
-                                            <li class='text-[0.6rem]'>MongoDB</li>
+                                            <h2 class="text-[0.6rem]">Databases:</h2>
+                                            <li class="text-[0.6rem]">PostgreSQL</li>
+                                            <li class="text-[0.6rem]">MongoDB</li>
                                         </div>
 
                                         <div class="technologies mt-5 space-y-2">
-                                            <h2 class='text-[0.6rem]'>Technologies/frameworks:</h2>
-                                            <li class='text-[0.6rem]'>Angular</li>
-                                            <li class='text-[0.6rem]'>Django Framework</li>
-                                            <li class='text-[0.6rem]'>FAST API</li>
+                                            <h2 class="text-[0.6rem]">Technologies/frameworks:</h2>
+                                            <li class="text-[0.6rem]">Angular</li>
+                                            <li class="text-[0.6rem]">Django Framework</li>
+                                            <li class="text-[0.6rem]">FAST API</li>
                                         </div>
                                     </div>
                                 </div>
@@ -521,14 +530,15 @@
                         </div>
                     </div>
                 </div>
-                {{!-- Resume Right --}}
+                {{! Resume Right }}
                 <div class="resume-right basis-8/12 flex flex-col">
                     <div class="right-upper-side basis-[9%] flex flex-col justify-center">
-                        <h1 class="text-5xl text-[#424544] font-bold ml-2">Vivek Shukla</h1>
+                        <h1 id="preview-name" class="text-5xl text-[#424544] font-bold ml-2">Vivek Shukla</h1>
                     </div>
                     <div class="basis-[1%] flex">
-                        <div class="text-xs font-bold ml-3 basis-[30%] text-[#424544]">MCA
-                            Batch (2022-24)</div>
+                        <div class="text-xs font-bold ml-3 basis-[30%] text-[#424544]">
+                            MCA Batch (<span id="preview-batch">2022-24</span>)
+                        </div>
                         <div class="bg-[#303c54] basis-[67%]"></div>
                         <div class="basis-[3%]"></div>
                     </div>
@@ -539,14 +549,15 @@
                                     <h1
                                         class="section-title text-md font-bold mt-5 inline-block border-b-2 border-[#303c54]">
                                         EDUCATION</h1>
-                                    <p class="masters text-xs font-bold mt-2">MCA | Thakur Institute of Management
-                                        Studies, Career Development &
-                                        Research (TIMSCDR), Mumbai | 8.38 CGPA | 2022-24
+                                    <p class="masters text-xs font-bold mt-2">MCA | Thakur
+                                        Institute of Management Studies, Career Development &
+                                        Research (TIMSCDR), Mumbai | 8.38 CGPA | <span id="preview-batch">2022-24</span>
                                     </p>
                                     <p class="masters-uni text-xs">University of Mumbai</p>
 
-                                    <p class="masters text-xs font-bold mt-2">BSC COMPUTER SCIENCE | Guru Nanak Khalsa
-                                        College Of Arts, Science and Commerce | 9.67 CGPA | 2019-22
+                                    <p class="masters text-xs font-bold mt-2">BSC COMPUTER SCIENCE
+                                        | Guru Nanak Khalsa College Of Arts, Science and Commerce |
+                                        9.67 CGPA | 2019-22
                                     </p>
                                     <p class="masters-uni text-xs">University of Mumbai</p>
                                 </div>
@@ -574,48 +585,54 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="section-3  basis-[30%] flex justify-center">
+                            <div class="section-3 basis-[30%] flex justify-center">
                                 <div class="section-container h-[100%] w-[90%] space-y-2">
                                     <h1
                                         class="section-title text-md font-bold mt-1 inline-block border-b-2 border-[#303c54]">
                                         PROJECTS UNDERTAKEN</h1>
                                     <p class="job-details text-xs font-bold mt-2">
-                                        INVESTOCRYPT | <a class='text-blue-700 underline'
-                                            href="https://investo-crypt.web.app">https://investo-crypt.web.app</a> | Feb
-                                        2023
+                                        INVESTOCRYPT |
+                                        <a class="text-blue-700 underline"
+                                            href="https://investo-crypt.web.app">https://investo-crypt.web.app</a>
+                                        | Feb 2023
                                     </p>
                                     <div class="bullet-points text-xs mt-1">
                                         <li>
-                                            An online investor-focused crypto-currency price tracker and a platform
-                                            that provides useful insights of the cryptocurrency market daily.
+                                            An online investor-focused crypto-currency price tracker
+                                            and a platform that provides useful insights of the
+                                            cryptocurrency market daily.
                                         </li>
                                         <li>
-                                            Built using Angular, Firebase data provided by Alternative.me API
+                                            Built using Angular, Firebase data provided by
+                                            Alternative.me API
                                         </li>
                                     </div>
 
                                     <p class="job-details text-xs font-bold mt-2">
-                                        DECENTRALISED VOTING SYSTEM | <a class='text-blue-700 underline'
+                                        DECENTRALISED VOTING SYSTEM |
+                                        <a class="text-blue-700 underline"
                                             href="https://github.com/vivekx01/blockchain-voting-system">Github-Link</a>
-                                        |
-                                        May 2022
+                                        | May 2022
                                     </p>
                                     <div class="bullet-points text-xs mt-1">
-                                        <li>An experimental project showcasing the potential of online
-                                            decentralized elections using blockchain technology.</li>
-                                        <li>It is built using
-                                            Angular, Django-REST, Solidity and Firebase.</li>
+                                        <li>An experimental project showcasing the potential of
+                                            online decentralized elections using blockchain
+                                            technology.</li>
+                                        <li>It is built using Angular, Django-REST, Solidity and
+                                            Firebase.</li>
                                     </div>
 
                                     <p class="job-details text-xs font-bold mt-2">
-                                        SCRAPMART | <a class='text-blue-700 underline'
-                                            href="https://scrapmart.onrender.com/">https://scrapmart.onrender.com/</a> |
-                                        August 2021
+                                        SCRAPMART |
+                                        <a class="text-blue-700 underline"
+                                            href="https://scrapmart.onrender.com/">https://scrapmart.onrender.com/</a>
+                                        | August 2021
                                     </p>
                                     <div class="bullet-points text-xs mt-1">
                                         <li>
-                                            A search listing platform, enabling users to search for local scrap dealers
-                                            in their area. The web application is optimized to work on all devices.
+                                            A search listing platform, enabling users to search for
+                                            local scrap dealers in their area. The web application is
+                                            optimized to work on all devices.
                                         </li>
                                         <li>
                                             Built using Django framework and Postgresql.
@@ -637,13 +654,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="section-5  basis-[12%] flex justify-center">
+                            <div class="section-5 basis-[12%] flex justify-center">
                                 <div class="section-container h-[100%] w-[90%]">
                                     <h1
                                         class="section-title text-md font-bold mt-1 inline-block border-b-2 border-[#303c54]">
                                         CERTIFICATIONS</h1>
                                     <div class="bullet-points text-xs mt-1">
-                                        <li>Blockchain and its Applications – NPTEL and IIT Kharagpur</li>
+                                        <li>Blockchain and its Applications – NPTEL and IIT
+                                            Kharagpur</li>
                                         <li>Ethical Hacking – NPTEL and IIT Kharagpur</li>
                                         <li>Angular Developer Bootcamp from LearnCodeOnline</li>
                                         <li>Career Edge Course on Soft Skills - TCS iON</li>
@@ -659,7 +677,8 @@
                                     </h1>
                                     <div class="bullet-points text-xs mt-1">
                                         <li>Member of Research & Development Committee at TIMSCDR</li>
-                                        <li>Member of Department of Lifelong Learning and Extension (DLLE) at TIMSCDR
+                                        <li>Member of Department of Lifelong Learning and Extension
+                                            (DLLE) at TIMSCDR
                                         </li>
                                         <li>Member of Vista 2023 Committee</li>
                                     </div>
@@ -672,11 +691,13 @@
                             <div class="section-container font-semibold text-[0.6rem] h-[90%] w-[90%] tracking-normal">
                                 <p class="mt-1">
                                     <span class="font-bold">Institute Address:</span>
-                                    Thakur Institute of Management Studies Career Development and Research -
-                                    Thakur Education Campus, Thakur Village, Kandivali East. Mumbai 400101.
+                                    Thakur Institute of Management Studies Career Development and
+                                    Research - Thakur Education Campus, Thakur Village, Kandivali
+                                    East. Mumbai 400101.
                                 </p>
                                 <p>
-                                    Phone Nos: 022- 28840484/91. E-mail ID: timscdr.tnp@thakureducation.org
+                                    Phone Nos: 022- 28840484/91. E-mail ID:
+                                    timscdr.tnp@thakureducation.org
                                 </p>
                             </div>
                         </div>

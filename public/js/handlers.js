@@ -3,6 +3,16 @@ $(document).ready(function () {
     // Toggle the visibility of the accordion body specified by the data-accordion-target attribute
     $($(this).data('accordion-target')).toggleClass('hidden');
   });
+  $('#fileInput').change(function () {
+    var file = this.files[0];
+    if (file) {
+      var reader = new FileReader();
+      reader.onload = function (event) {
+        $('#preview-photo').attr('src', event.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  });
   // Populate text inputs with corresponding data from the preview pane
   $('.editor-field').each(function () {
     var targetSelector = $(this).data('target'); // Get the target selector

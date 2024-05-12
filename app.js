@@ -13,8 +13,8 @@ app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 // Middleware to parse incoming JSON and URL-encoded form data
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({limit: '10mb', extended: true }));
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));

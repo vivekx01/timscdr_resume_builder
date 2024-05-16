@@ -310,7 +310,7 @@
             <div id="accordion-color-body-7" class="hidden" aria-labelledby="accordion-color-heading-2">
                 <div class="p-5 border space-y-3 border-b-0 border-gray-200 dark:border-gray-700">
                    
-                    <div class="hsc space-y-1">
+                    <div class="mca space-y-1">
                         <label for="hsc" class="font-bold" >Class XII:</label>
                         <br>
                         <label for="hsc_college">College:</label>
@@ -371,17 +371,51 @@
                 </button>
             </h2>
             <div id="accordion-color-body-8" class="hidden" aria-labelledby="accordion-color-heading-2">
-                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                        conceptualized and designed using the Figma software so
-                        everything you see in the library has a design equivalent in our
-                        Figma file.</p>
-                    <p class="text-gray-500 dark:text-gray-400">Check out the
-                        <a href="https://flowbite.com/figma/"
-                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                        based on the utility classes from Tailwind CSS and components
-                        from Flowbite.
-                    </p>
+                <div class="p-5 border space-y-3 border-b-0 border-gray-200 dark:border-gray-700">                
+                    <div class="mca space-y-1">
+                        <label for="hsc" class="font-bold" >Project 1:</label>
+                        <br>
+                        <label for="ug_degree">College:</label>
+                        <input type="text" id="hsc_college" class="editor-field text-black" data-target="#preview-hsc_college"
+                            placeholder="Enter your college" />
+                        <br>
+                        <label for="ug_college">Score:</label>
+                        <input type="text" id="hsc_score" class="editor-field text-black" data-target="#preview-hsc_score"
+                            placeholder="Enter your score" />
+                        <br>
+                        <label for="ug_cgpa">Passing year:</label>
+                        <input type="text" id="hsc_year" class="editor-field text-black" data-target="#preview-hsc_year"
+                            placeholder="Enter your year" />
+                        <br>
+                        <label for="ug_year">Stream:</label>
+                        <input type="text" id="hsc_stream" class="editor-field text-black" data-target="#preview-hsc_stream"
+                            placeholder="Enter your stream" />
+                        <br>
+                        <label for="mca_cgpa">Class XII Board:</label>
+                        <input type="text" id="hsc_board" class="editor-field text-black" data-target="#preview-hsc_board"
+                            placeholder="Enter your board" />
+                    </div>
+                    
+                    <div class="mca space-y-1">
+                        <label for="ssc" class="font-bold" >Class X:</label>
+                        <br>
+                        <label for="ug_degree">School:</label>
+                        <input type="text" id="ssc_school" class="editor-field text-black" data-target="#preview-ssc_school"
+                            placeholder="Enter your school" />
+                        <br>
+                        <label for="ug_college">Score:</label>
+                        <input type="text" id="ssc_score" class="editor-field text-black" data-target="#preview-ssc_score"
+                            placeholder="Enter your score" />
+                        <br>
+                        <label for="ug_cgpa">Passing year:</label>
+                        <input type="text" id="ssc_year" class="editor-field text-black" data-target="#preview-ssc_year"
+                            placeholder="Enter your year" />
+                        <br>
+                        <label for="mca_cgpa">Class X Board:</label>
+                        <input type="text" id="ssc_board" class="editor-field text-black" data-target="#preview-ssc_board"
+                            placeholder="Enter your board" />
+                    </div>
+
                 </div>
             </div>
 
@@ -475,20 +509,25 @@
     {{! Preview }}
     <div class="right-side basis-8/12 bg-gray-200 overflow-auto">
         <div class="right-upper-bar bg-[#303c54] text-white flex">
-            <h1 class="basis-[45%] text-lg font-bold ml-5">RESUME PREVIEW</h1>
+            <h1 class="basis-[30%] text-lg font-bold ml-5">RESUME PREVIEW</h1>
 
             <div id="report-bug"
-                class="basis-[20%] action-buttons bg-red-500 text-white text-center flex justify-center items-center cursor-pointer">
+                class="basis-[18%] action-buttons bg-red-500 text-white text-center flex justify-center items-center cursor-pointer">
                 <span><i class="fa-solid fa-bug mr-1"></i></span>
                 Report a bug
             </div>
             <div id="github"
-                class="basis-[20%] action-buttons bg-black text-white text-center flex justify-center items-center cursor-pointer">
+                class="basis-[18%] action-buttons bg-black text-white text-center flex justify-center items-center cursor-pointer">
                 <span><i class="fa-brands fa-github mr-2"></i></span>
                 <a href="https://github.com/vivekx01/timscdr_resume_builder" target="_blank">Source code</a>
             </div>
+            <div id="export-json"
+                class="basis-[16%] action-buttons bg-yellow-500 text-black text-center flex justify-center items-center cursor-pointer">
+                <span><i class="fa-solid fa-file-export"></i></span>
+                Export JSON
+            </div>
             <div
-                class="basis-[15%] action-buttons bg-green-500 text-white text-center flex flex-col justify-center items-center">
+                class="basis-[16%] action-buttons bg-green-500 text-white text-center flex flex-col justify-center items-center">
                 <div id="download-loader" class="loader hide"></div>
                 <div id="generate-pdf-btn" class="cursor-pointer">
                     <span><i class="fa-solid fa-download"></i></span>

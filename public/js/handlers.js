@@ -5,10 +5,18 @@ $(document).ready(function () {
     var previewValue = $(targetSelector).text(); // Get the content from the preview pane
     $(this).val(previewValue); // Set the text input value
   });
-
-  $('.accordion-heading').click(function () {
+  //Event delegation for accordion toggle
+  $(document).on('click', '.accordion-heading', function () {
     // Toggle the visibility of the accordion body specified by the data-accordion-target attribute
     $($(this).data('accordion-target')).toggleClass('hidden');
+  });
+
+  $(document).on('click', '#delete-section', function () {
+    // Toggle the visibility of the accordion body specified by the data-accordion-target attribute
+    let index = $(this).attr("data-accordion-target");
+    console.log(index);
+    $(`#accordion-color-heading-${index}`).remove();
+    $(`#accordion-color-body-${index}`).remove();
   });
 
   $('#fileInput').change(function () {

@@ -1,10 +1,20 @@
 <div class="main h-full flex flex-cols">
     {{! Editor }}
     <div class="left-side basis-4/12 bg-black text-white overflow-auto">
-        <div class="left-section-heading mb-3">
-            <h1 class="text-md font-bold text-center mt-3">TIMSCDR RESUME BUILDER</h1>
+        <div class="left-section-heading mb-3 pt-3 pb-2 flex ">
+            <h1 class="text-md font-bold text-center basis-[60%]">TIMSCDR RESUME BUILDER</h1>
+            <div id="openModal" class=" basis-[40%] flex justify-center items-center cursor-pointer"><i class="fa-solid fa-square-plus mr-2"></i> Add new section</div>
         </div>
-
+        <div id="createSection" class="fixed z-10 text-black inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-sm">
+                <h2 class="text-xl font-bold mb-4">Enter Section Name</h2>
+                <input type="text" id="nameInput" class="border p-2 w-full mb-4" placeholder="Section name">
+                <div class="flex justify-end">
+                    <button id="cancelButton" class="px-4 py-2 bg-gray-300 text-gray-800 rounded mr-2">Cancel</button>
+                    <button id="saveButton" class="px-4 py-2 bg-black text-white rounded">Create</button>
+                </div>
+            </div>
+        </div>
         <div class="editor-pane">
             <h2 id="accordion-color-heading-0">
                 <button type="button"
@@ -308,8 +318,7 @@
                 </button>
             </h2>
             <div id="accordion-color-body-7" class="hidden" aria-labelledby="accordion-color-heading-2">
-                <div class="p-5 border space-y-3 border-b-0 border-gray-200 dark:border-gray-700">
-                   
+                <div class="p-5 border space-y-3 border-b-0 border-gray-200 dark:border-gray-700">                  
                     <div class="mca space-y-1">
                         <label for="hsc" class="font-bold" >Class XII:</label>
                         <br>
@@ -357,151 +366,7 @@
                 </div>
             </div>
 
-            <h2 id="accordion-color-heading-8">
-                <button type="button"
-                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                    data-accordion-target="#accordion-color-body-8" aria-expanded="false"
-                    aria-controls="accordion-color-body-2">
-                    <span>Projects Undertaken</span>
-                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 5 5 1 1 5" />
-                    </svg>
-                </button>
-            </h2>
-            <div id="accordion-color-body-8" class="hidden" aria-labelledby="accordion-color-heading-2">
-                <div class="p-5 border space-y-3 border-b-0 border-gray-200 dark:border-gray-700">                
-                    <div class="mca space-y-1">
-                        <label for="hsc" class="font-bold" >Project 1:</label>
-                        <br>
-                        <label for="ug_degree">College:</label>
-                        <input type="text" id="hsc_college" class="editor-field text-black" data-target="#preview-hsc_college"
-                            placeholder="Enter your college" />
-                        <br>
-                        <label for="ug_college">Score:</label>
-                        <input type="text" id="hsc_score" class="editor-field text-black" data-target="#preview-hsc_score"
-                            placeholder="Enter your score" />
-                        <br>
-                        <label for="ug_cgpa">Passing year:</label>
-                        <input type="text" id="hsc_year" class="editor-field text-black" data-target="#preview-hsc_year"
-                            placeholder="Enter your year" />
-                        <br>
-                        <label for="ug_year">Stream:</label>
-                        <input type="text" id="hsc_stream" class="editor-field text-black" data-target="#preview-hsc_stream"
-                            placeholder="Enter your stream" />
-                        <br>
-                        <label for="mca_cgpa">Class XII Board:</label>
-                        <input type="text" id="hsc_board" class="editor-field text-black" data-target="#preview-hsc_board"
-                            placeholder="Enter your board" />
-                    </div>
-                    
-                    <div class="mca space-y-1">
-                        <label for="ssc" class="font-bold" >Class X:</label>
-                        <br>
-                        <label for="ug_degree">School:</label>
-                        <input type="text" id="ssc_school" class="editor-field text-black" data-target="#preview-ssc_school"
-                            placeholder="Enter your school" />
-                        <br>
-                        <label for="ug_college">Score:</label>
-                        <input type="text" id="ssc_score" class="editor-field text-black" data-target="#preview-ssc_score"
-                            placeholder="Enter your score" />
-                        <br>
-                        <label for="ug_cgpa">Passing year:</label>
-                        <input type="text" id="ssc_year" class="editor-field text-black" data-target="#preview-ssc_year"
-                            placeholder="Enter your year" />
-                        <br>
-                        <label for="mca_cgpa">Class X Board:</label>
-                        <input type="text" id="ssc_board" class="editor-field text-black" data-target="#preview-ssc_board"
-                            placeholder="Enter your board" />
-                    </div>
-
-                </div>
-            </div>
-
-            <h2 id="accordion-color-heading-9">
-                <button type="button"
-                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                    data-accordion-target="#accordion-color-body-9" aria-expanded="false"
-                    aria-controls="accordion-color-body-2">
-                    <span>Fundamentals Known</span>
-                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 5 5 1 1 5" />
-                    </svg>
-                </button>
-            </h2>
-            <div id="accordion-color-body-9" class="hidden" aria-labelledby="accordion-color-heading-2">
-                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                        conceptualized and designed using the Figma software so
-                        everything you see in the library has a design equivalent in our
-                        Figma file.</p>
-                    <p class="text-gray-500 dark:text-gray-400">Check out the
-                        <a href="https://flowbite.com/figma/"
-                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                        based on the utility classes from Tailwind CSS and components
-                        from Flowbite.
-                    </p>
-                </div>
-            </div>
-
-            <h2 id="accordion-color-heading-10">
-                <button type="button"
-                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                    data-accordion-target="#accordion-color-body-10" aria-expanded="false"
-                    aria-controls="accordion-color-body-2">
-                    <span>Certifications</span>
-                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 5 5 1 1 5" />
-                    </svg>
-                </button>
-            </h2>
-            <div id="accordion-color-body-10" class="hidden" aria-labelledby="accordion-color-heading-2">
-                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                        conceptualized and designed using the Figma software so
-                        everything you see in the library has a design equivalent in our
-                        Figma file.</p>
-                    <p class="text-gray-500 dark:text-gray-400">Check out the
-                        <a href="https://flowbite.com/figma/"
-                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                        based on the utility classes from Tailwind CSS and components
-                        from Flowbite.
-                    </p>
-                </div>
-            </div>
-
-            <h2 id="accordion-color-heading-11">
-                <button type="button"
-                    class="accordion-heading flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                    data-accordion-target="#accordion-color-body-11" aria-expanded="false"
-                    aria-controls="accordion-color-body-2">
-                    <span>Extra-Curricular Activities</span>
-                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 5 5 1 1 5" />
-                    </svg>
-                </button>
-            </h2>
-            <div id="accordion-color-body-11" class="hidden" aria-labelledby="accordion-color-heading-2">
-                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first
-                        conceptualized and designed using the Figma software so
-                        everything you see in the library has a design equivalent in our
-                        Figma file.</p>
-                    <p class="text-gray-500 dark:text-gray-400">Check out the
-                        <a href="https://flowbite.com/figma/"
-                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                        based on the utility classes from Tailwind CSS and components
-                        from Flowbite.
-                    </p>
-                </div>
-            </div>
+            
 
         </div>
     </div>
@@ -720,7 +585,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="editable basis-[68%]">
+                            <div class="editable space-y-2 basis-[68%]">
                                 <div class="section-3 basis-[30%] flex justify-center">
                                     <div class="section-container h-[100%] w-[90%] space-y-2">
                                         <h1

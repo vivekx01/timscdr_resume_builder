@@ -17,11 +17,12 @@ $(document).ready(function () {
             return false;
         }
         let noOfChildren = $(".editor-pane").children().length / 2;
-        addSection(name, noOfChildren)
+        let previewIndex = $(".right-lower.main-content").children().length;
+        addSection(name, noOfChildren, previewIndex)
         $("#createSection").addClass("hidden");
     });
 });
-function addSection(sectionName, children) {
+function addSection(sectionName, children, pIndex) {
     let index = children;
     let editor_template = `
     <h2 id="accordion-color-heading-${index}">
@@ -31,8 +32,7 @@ function addSection(sectionName, children) {
             aria-controls="accordion-color-body-${index}">
             <span>${sectionName}</span>
             <div class = "flex justify-end">
-                <i id="delete-section" class="fa-solid fa-trash mr-3" data-accordion-target="${index}"></i>
-                <i class="fa-solid fa-bars mr-3"></i>
+                <i id="delete-section" class="fa-solid fa-trash mr-3" data-accordion-target="${index}" data-preview-target="section-${pIndex}"></i>
                 <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -48,7 +48,17 @@ function addSection(sectionName, children) {
         </div>
     </div>
     `
+    let preview_template = `
+    <div class="section-${pIndex} flex justify-center">
+        <div class="section-container h-[100%] w-[90%]">
+            <h1
+                class="section-title text-md font-bold mt-1 inline-block border-b-2 border-[#303c54]">
+                ${sectionName.toUpperCase()}</h1>
+        </div>
+    </div>
+    `
     $(".editor-pane").append(editor_template);
+    $(".right-lower.main-content .editable").append(preview_template);
     toastr.success('Section created successfully');
 }
 

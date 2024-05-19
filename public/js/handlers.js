@@ -14,9 +14,12 @@ $(document).ready(function () {
   $(document).on('click', '#delete-section', function () {
     // Toggle the visibility of the accordion body specified by the data-accordion-target attribute
     let index = $(this).attr("data-accordion-target");
+    let previewClass = $(this).attr("data-preview-target");
     console.log(index);
     $(`#accordion-color-heading-${index}`).remove();
     $(`#accordion-color-body-${index}`).remove();
+    $(`.${previewClass}`).remove();
+    toastr.success('Section deleted successfully');
   });
 
   $('#fileInput').change(function () {

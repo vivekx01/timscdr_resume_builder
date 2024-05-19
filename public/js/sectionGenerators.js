@@ -17,9 +17,20 @@ $(document).ready(function () {
             return false;
         }
         let noOfChildren = $(".editor-pane").children().length / 2;
-        let previewIndex = $(".right-lower.main-content").children().length;
+        let editableLength = $('.right-lower.main-content .editable').children().length;
+        let previewIndex;
+        if (editableLength == 0) {
+            previewIndex = $(".right-lower.main-content").children().length;
+        }
+        else {
+            previewIndex = editableLength + $(".right-lower.main-content").children().length;
+        }
         addSection(name, noOfChildren, previewIndex)
         $("#createSection").addClass("hidden");
+    });
+
+    $(document).on('click', '.create-button', function () {
+        toastr.success('Clicked');
     });
 });
 function addSection(sectionName, children, pIndex) {
@@ -42,10 +53,12 @@ function addSection(sectionName, children, pIndex) {
         </button>
     </h2>
     <div id="accordion-color-body-${index}" class="hidden" aria-labelledby="accordion-color-heading-${index}">
-        <div class="p-5 border space-y-3 border-b-0 border-gray-200 dark:border-gray-700">
-        <i id="delete-section" class="fa-solid fa-trash mr-3 cursor-pointer" data-accordion-target="${index}"></i>
-            lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor in diam                
-        </div>
+        <div class="accordion-inner p-5 border space-y-3 border-b-0 border-gray-200 dark:border-gray-700">
+            <div class="creator-buttons space-x-2">
+                <button class="create-button border border-white text-white pl-1 pr-1 rounded" data-action="create-title" data-accordion-target="${index}" data-preview-section="section-${pIndex}"><i class="fa-solid fa-square-plus mr-2"></i>Title</button>
+                <button class="create-button border border-white text-white pl-1 pr-1 rounded" data-action="create-adv-title" data-accordion-target="${index}" data-preview-section="section-${pIndex}"><i class="fa-solid fa-square-plus mr-2"></i>Title+url+date</button>
+                <button class="create-button border border-white text-white pl-1 pr-1 rounded" data-action="create-bullet" data-accordion-target="${index}" data-preview-section="section-${pIndex}"><i class="fa-solid fa-square-plus mr-2"></i>Bullet point</button>
+            </div>            
     </div>
     `
     let preview_template = `

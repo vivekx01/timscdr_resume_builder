@@ -30,7 +30,42 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.create-button', function () {
-        toastr.success('Clicked');
+        let action = $(this).attr('data-action');
+        let accordionIndex = $(this).attr('data-accordion-target');
+        let previewSection = $(this).attr('data-preview-section');
+        if (action == "create-title"){
+            return true;
+        }
+        else if (action == "create-adv-title") {
+            let adv_title_template = `
+            <p class="masters text-xs font-bold mt-2"><span id="preview-ug_degree">BSC COMPUTER SCIENCE</span>
+                | <span id="preview-ug_college">Guru Nanak Khalsa College Of Arts, Science and Commerce</span> |
+                <span id="preview-ug_cgpa">9.67</span> CGPA | <span id="preview-ug_year">2019-22</span>
+            </p>
+            `
+            let adv_title_editor_template = `
+            <div class="space-y-1">
+                <label for="proglanguage">Programming Languages:</label>
+                <br>
+                <label for="dbs">Language 1:</label>
+                <input type="text" id="proglanguage1" class="editor-field text-black" data-target="#preview-proglanguage1"
+                    placeholder="Enter a programming language" />
+                <br>
+                <label for="dbs">Language 2:</label>
+                <input type="text" id="proglanguage2" class="editor-field text-black" data-target="#preview-proglanguage2"
+                    placeholder="Enter a programming language" />
+            </div>
+            `
+
+            $(`.right-lower.main-content .editable .${previewSection} .section-container`).append(adv_title_template);
+            $(`#accordion-color-body-${accordionIndex} .accordion-inner`).append(adv_title_editor_template);
+        }
+        else if (action == "create-bullet") {
+            return true;
+        }
+        else {
+            toastr.error("Invalid action: " + action);
+        }
     });
 });
 function addSection(sectionName, children, pIndex) {

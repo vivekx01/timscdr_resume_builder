@@ -3,7 +3,16 @@ const router = express.Router();
 const puppeteer = require('puppeteer');
 
 router.get('/', (req, res) => {
-  res.render('home');
+  // Extract the protocol, host, and port from the request
+  const protocol = req.protocol;
+  const host = req.hostname;
+  const port = process.env.PORT || 6868; // or any other default port if not set
+
+  // Construct the base URL
+  const baseUrl = `${protocol}://${host}:${port}`;
+
+  // Pass the baseUrl to the template
+  res.render('home', { baseUrl });
 });
 
 

@@ -33,39 +33,7 @@ $(document).ready(function () {
         let action = $(this).attr('data-action');
         let accordionIndex = $(this).attr('data-accordion-target');
         let previewSection = $(this).attr('data-preview-section');
-        if (action == "create-title"){
-            return true;
-        }
-        else if (action == "create-adv-title") {
-            let adv_title_template = `
-            <p class="masters text-xs font-bold mt-2"><span id="preview-ug_degree">BSC COMPUTER SCIENCE</span>
-                | <span id="preview-ug_college">Guru Nanak Khalsa College Of Arts, Science and Commerce</span> |
-                <span id="preview-ug_cgpa">9.67</span> CGPA | <span id="preview-ug_year">2019-22</span>
-            </p>
-            `
-            let adv_title_editor_template = `
-            <div class="space-y-1">
-                <label for="proglanguage">Programming Languages:</label>
-                <br>
-                <label for="dbs">Language 1:</label>
-                <input type="text" id="proglanguage1" class="editor-field text-black" data-target="#preview-proglanguage1"
-                    placeholder="Enter a programming language" />
-                <br>
-                <label for="dbs">Language 2:</label>
-                <input type="text" id="proglanguage2" class="editor-field text-black" data-target="#preview-proglanguage2"
-                    placeholder="Enter a programming language" />
-            </div>
-            `
-
-            $(`.right-lower.main-content .editable .${previewSection} .section-container`).append(adv_title_template);
-            $(`#accordion-color-body-${accordionIndex} .accordion-inner`).append(adv_title_editor_template);
-        }
-        else if (action == "create-bullet") {
-            return true;
-        }
-        else {
-            toastr.error("Invalid action: " + action);
-        }
+        addPointers(action, accordionIndex, previewSection);
     });
 });
 function addSection(sectionName, children, pIndex) {
@@ -110,6 +78,78 @@ function addSection(sectionName, children, pIndex) {
     toastr.success('Section created successfully');
 }
 
-// function addPointers() {
-//     return true;
-// }
+function addPointers(action, accordionIndex, previewSection) {
+    if (action == "create-title") {
+        let title_index = $(`.right-lower.main-content .editable .${previewSection} .section-container`).children('.title').length + 1;
+        let title_template = `
+        <p class="title title-${title_index} text-xs font-bold mt-2">
+            <span id="${previewSection}-title-${title_index}">Your Title</span>
+        </p>
+        `
+        let title_editor_template = `
+        <div class="space-y-1">
+            <label for="title-${title_index}">Title ${title_index}:</label>
+            <input type="text" id="title-${title_index}" class="editor-field text-black" value="Your Title" data-target="#${previewSection}-title-${title_index}"
+                placeholder="Enter a title" />
+        </div>
+        `
+
+        $(`.right-lower.main-content .editable .${previewSection} .section-container`).append(title_template);
+        $(`#accordion-color-body-${accordionIndex} .accordion-inner`).append(title_editor_template);
+    }
+    else if (action == "create-adv-title") {
+        let adv_title_index = $(`.right-lower.main-content .editable .${previewSection} .section-container`).children('.adv-title').length + 1;
+        let adv_title_template = `
+        <p class="adv-title text-xs font-bold mt-2">
+            <span id="${previewSection}-adv-title-${adv_title_index}">Your Title</span> |
+            <a id="${previewSection}-adv-link-${adv_title_index}" class="text-blue-700 underline"
+                href="https://google.com">https://google.com</a>
+            | <span id="${previewSection}-adv-date-${adv_title_index}">Feb 2023</span>
+        </p>
+        `
+        let adv_title_editor_template = `
+        <div class="space-y-1">
+            <label for="proglanguage">Advanced Title ${adv_title_index}:</label>
+            <br>
+            <label for="dbs">Title:</label>
+            <input type="text" id="proglanguage1" class="editor-field text-black" data-target="#${previewSection}-adv-title-${adv_title_index}"
+                placeholder="Enter a title" value="Your Title" />
+            <br>
+            <label for="dbs">Link:</label>
+            <input type="text" id="proglanguage2" class="editor-field text-black" data-target="#${previewSection}-adv-link-${adv_title_index}"
+                placeholder="Enter a link" value="https://google.com" />
+            <br>
+            <label for="dbs">Date:</label>
+            <input type="text" id="proglanguage2" class="editor-field text-black" data-target="#${previewSection}-adv-date-${adv_title_index}"
+                placeholder="Enter a date" value="Feb 2023" />
+        </div>
+        `
+
+        $(`.right-lower.main-content .editable .${previewSection} .section-container`).append(adv_title_template);
+        $(`#accordion-color-body-${accordionIndex} .accordion-inner`).append(adv_title_editor_template);
+    }
+    else if (action == "create-bullet") {
+        let bullet_template = `
+        <div class="bullet-points text-xs mt-1">
+        <li>
+            An online investor-focused crypto-currency price tracker
+            and a platform that provides useful insights of the
+            cryptocurrency market daily.
+        </li>
+        </div>
+        `
+
+        let bullet_editor_template = `
+        <label for="dbs">Bullet 1:</label>
+        <input type="text" id="bullet1" class="editor-field text-black" data-target="#preview-bullet1"
+            placeholder="Enter a bullet" />
+        `
+
+        $(`.right-lower.main-content .editable .${previewSection} .section-container`).append(bullet_template);
+        $(`#accordion-color-body-${accordionIndex} .accordion-inner`).append(bullet_editor_template);
+
+    }
+    else {
+        toastr.error("Invalid action: " + action);
+    }
+}

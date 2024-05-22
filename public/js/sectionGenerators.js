@@ -104,7 +104,7 @@ function addPointers(action, accordionIndex, previewSection) {
             <span id="${previewSection}-adv-title-${adv_title_index}">Your Title</span> |
             <a id="${previewSection}-adv-link-${adv_title_index}" class="text-blue-700 underline"
                 href="https://google.com">https://google.com</a>
-            | <span id="${previewSection}-adv-date-${adv_title_index}">Feb 2023</span>
+            | <span id="${previewSection}-adv-date-${adv_title_index}">February 2023</span>
         </p>
         `
         let adv_title_editor_template = `
@@ -121,7 +121,7 @@ function addPointers(action, accordionIndex, previewSection) {
             <br>
             <label for="dbs">Date:</label>
             <input type="text" id="proglanguage2" class="editor-field text-black" data-target="#${previewSection}-adv-date-${adv_title_index}"
-                placeholder="Enter a date" value="Feb 2023" />
+                placeholder="Enter a date" value="February 2023" />
         </div>
         `
 
@@ -129,20 +129,19 @@ function addPointers(action, accordionIndex, previewSection) {
         $(`#accordion-color-body-${accordionIndex} .accordion-inner`).append(adv_title_editor_template);
     }
     else if (action == "create-bullet") {
+        let bullet_index = $(`.right-lower.main-content .editable .${previewSection} .section-container`).children('.bullet-point').length + 1;
+        let lorem_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         let bullet_template = `
-        <div class="bullet-points text-xs mt-1">
-        <li>
-            An online investor-focused crypto-currency price tracker
-            and a platform that provides useful insights of the
-            cryptocurrency market daily.
-        </li>
+        <div class="bullet-point bullet-${bullet_index} text-xs mt-1">
+        <li id="${previewSection}-bullet-${bullet_index}">${lorem_text}</li>
         </div>
         `
 
         let bullet_editor_template = `
-        <label for="dbs">Bullet 1:</label>
-        <input type="text" id="bullet1" class="editor-field text-black" data-target="#preview-bullet1"
-            placeholder="Enter a bullet" />
+        <label for="dbs">Bullet ${bullet_index}:</label>
+        <input type="text" id="bullet-${bullet_index}" class="editor-field text-black" data-target="#${previewSection}-bullet-${bullet_index}"
+            placeholder="Enter a bullet point" value="${lorem_text}" />
+        <br>
         `
 
         $(`.right-lower.main-content .editable .${previewSection} .section-container`).append(bullet_template);

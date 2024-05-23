@@ -87,10 +87,11 @@ function addPointers(action, accordionIndex, previewSection) {
         </p>
         `
         let title_editor_template = `
-        <div class="space-y-1">
+        <div class="title-${title_index} space-y-1">
             <label for="title-${title_index}">Title ${title_index}:</label>
             <input type="text" id="title-${title_index}" class="editor-field text-black" value="Your Title" data-target="#${previewSection}-title-${title_index}"
                 placeholder="Enter a title" />
+                <i id="delete-sub-section" class="fa-solid fa-trash ml-3 cursor-pointer" data-accordion-target="title-${title_index}" data-preview-target="${previewSection}-adv-title-${title_index}"></i>
         </div>
         `
 
@@ -100,7 +101,7 @@ function addPointers(action, accordionIndex, previewSection) {
     else if (action == "create-adv-title") {
         let adv_title_index = $(`.right-lower.main-content .editable .${previewSection} .section-container`).children('.adv-title').length + 1;
         let adv_title_template = `
-        <p class="adv-title text-xs font-bold mt-2">
+        <p class="adv-title ${previewSection}-adv-title-${adv_title_index}  text-xs font-bold mt-2">
             <span id="${previewSection}-adv-title-${adv_title_index}">Your Title</span> |
             <a id="${previewSection}-adv-link-${adv_title_index}" class="text-blue-700 underline"
                 href="https://google.com">https://google.com</a>
@@ -108,8 +109,8 @@ function addPointers(action, accordionIndex, previewSection) {
         </p>
         `
         let adv_title_editor_template = `
-        <div class="space-y-1">
-            <label for="proglanguage">Advanced Title ${adv_title_index}:</label>
+        <div class="adv-title-${adv_title_index} space-y-1">
+            <label for="proglanguage">Advanced Title ${adv_title_index}:</label> <i id="delete-sub-section" class="fa-solid fa-trash ml-3 cursor-pointer" data-accordion-target="adv-title-${adv_title_index}" data-preview-target="${previewSection}-adv-title-${adv_title_index}"></i>
             <br>
             <label for="dbs">Title:</label>
             <input type="text" id="proglanguage1" class="editor-field text-black" data-target="#${previewSection}-adv-title-${adv_title_index}"
@@ -138,10 +139,13 @@ function addPointers(action, accordionIndex, previewSection) {
         `
 
         let bullet_editor_template = `
-        <label for="dbs">Bullet ${bullet_index}:</label>
-        <input type="text" id="bullet-${bullet_index}" class="editor-field text-black" data-target="#${previewSection}-bullet-${bullet_index}"
-            placeholder="Enter a bullet point" value="${lorem_text}" />
-        <br>
+        <div class="bullet-${bullet_index}">
+            <label for="dbs">Bullet ${bullet_index}:</label>
+            <input type="text" id="bullet-${bullet_index}" class="editor-field text-black" data-target="#${previewSection}-bullet-${bullet_index}"
+                placeholder="Enter a bullet point" value="${lorem_text}" />
+                <i id="delete-sub-section" class="fa-solid fa-trash ml-3 cursor-pointer" data-accordion-target="bullet-${bullet_index}" data-preview-target="${previewSection}-bullet-${bullet_index}"></i>
+            <br>
+        </div>
         `
 
         $(`.right-lower.main-content .editable .${previewSection} .section-container`).append(bullet_template);

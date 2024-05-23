@@ -25,6 +25,15 @@ $(document).ready(function () {
     toastr.success('Section deleted successfully');
   });
 
+  $(document).on('click', '#delete-sub-section', function () {
+    // Toggle the visibility of the accordion body specified by the data-accordion-target attribute
+    let index = $(this).attr("data-accordion-target");
+    let previewClass = $(this).attr("data-preview-target");
+    $(`.${index}`).remove();
+    $(`.${previewClass}`).remove();
+    toastr.success('Sub-section deleted successfully');
+  });
+
   $('#fileInput').change(function () {
     var file = this.files[0];
     if (file) {

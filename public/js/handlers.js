@@ -21,7 +21,7 @@ $(document).ready(function () {
     console.log(index);
     $(`#accordion-color-heading-${index}`).remove();
     $(`#accordion-color-body-${index}`).remove();
-    $(`.${previewClass}`).remove();
+    $(`.editable .${previewClass}`).remove();
     toastr.success('Section deleted successfully');
   });
 

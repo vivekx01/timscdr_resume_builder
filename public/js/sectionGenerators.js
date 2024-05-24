@@ -82,16 +82,16 @@ function addPointers(action, accordionIndex, previewSection) {
     if (action == "create-title") {
         let title_index = $(`.right-lower.main-content .editable .${previewSection} .section-container`).children('.title').length + 1;
         let title_template = `
-        <p class="title title-${title_index} text-xs font-bold mt-2">
+        <p class="title ${previewSection}-title-${title_index} text-xs font-bold mt-2">
             <span id="${previewSection}-title-${title_index}">Your Title</span>
         </p>
         `
         let title_editor_template = `
-        <div class="title-${title_index} space-y-1">
+        <div class="${previewSection}-title-${title_index} space-y-1">
             <label for="title-${title_index}">Title ${title_index}:</label>
             <input type="text" id="title-${title_index}" class="editor-field text-black" value="Your Title" data-target="#${previewSection}-title-${title_index}"
                 placeholder="Enter a title" />
-                <i id="delete-sub-section" class="fa-solid fa-trash ml-3 cursor-pointer" data-accordion-target="title-${title_index}" data-preview-target="${previewSection}-adv-title-${title_index}"></i>
+                <i id="delete-sub-section" class="fa-solid fa-trash ml-3 cursor-pointer" data-accordion-target="${previewSection}-title-${title_index}" data-preview-target="${previewSection}-adv-title-${title_index}"></i>
         </div>
         `
 
@@ -109,8 +109,8 @@ function addPointers(action, accordionIndex, previewSection) {
         </p>
         `
         let adv_title_editor_template = `
-        <div class="adv-title-${adv_title_index} space-y-1">
-            <label for="proglanguage">Advanced Title ${adv_title_index}:</label> <i id="delete-sub-section" class="fa-solid fa-trash ml-3 cursor-pointer" data-accordion-target="adv-title-${adv_title_index}" data-preview-target="${previewSection}-adv-title-${adv_title_index}"></i>
+        <div class="${previewSection}-adv-title-${adv_title_index} space-y-1">
+            <label for="proglanguage">Advanced Title ${adv_title_index}:</label> <i id="delete-sub-section" class="fa-solid fa-trash ml-3 cursor-pointer" data-accordion-target="${previewSection}-adv-title-${adv_title_index}" data-preview-target="${previewSection}-adv-title-${adv_title_index}"></i>
             <br>
             <label for="dbs">Title:</label>
             <input type="text" id="proglanguage1" class="editor-field text-black" data-target="#${previewSection}-adv-title-${adv_title_index}"
@@ -133,17 +133,17 @@ function addPointers(action, accordionIndex, previewSection) {
         let bullet_index = $(`.right-lower.main-content .editable .${previewSection} .section-container`).children('.bullet-point').length + 1;
         let lorem_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         let bullet_template = `
-        <div class="bullet-point bullet-${bullet_index} text-xs mt-1">
+        <div class="bullet-point ${previewSection}-bullet-${bullet_index} text-xs mt-1">
         <li id="${previewSection}-bullet-${bullet_index}">${lorem_text}</li>
         </div>
         `
 
         let bullet_editor_template = `
-        <div class="bullet-${bullet_index}">
+        <div class="${previewSection}-bullet-${bullet_index}">
             <label for="dbs">Bullet ${bullet_index}:</label>
             <input type="text" id="bullet-${bullet_index}" class="editor-field text-black" data-target="#${previewSection}-bullet-${bullet_index}"
                 placeholder="Enter a bullet point" value="${lorem_text}" />
-                <i id="delete-sub-section" class="fa-solid fa-trash ml-3 cursor-pointer" data-accordion-target="bullet-${bullet_index}" data-preview-target="${previewSection}-bullet-${bullet_index}"></i>
+                <i id="delete-sub-section" class="fa-solid fa-trash ml-3 cursor-pointer" data-accordion-target="${previewSection}-bullet-${bullet_index}" data-preview-target="${previewSection}-bullet-${bullet_index}"></i>
             <br>
         </div>
         `

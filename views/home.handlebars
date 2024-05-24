@@ -410,9 +410,12 @@
                         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%,
                                 25% 100%, 0% 50%);
                     }
+                    .font-sans {
+                        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                    }
                 </style>
                 {{! Resume Left }}
-                <div class="resume-left relative basis-4/12 text-white flex flex-col">
+                <div class="resume-left font-sans relative basis-4/12 text-white flex flex-col">
                     <div class="bg-white text-black basis-[23%] flex flex-col items-center">
                         <img class="mt-4" src="{{baseUrl}}/images/timscdr_logo.png" alt="Timscdr Logo" height="150px"
                             width="150px" />
@@ -532,7 +535,7 @@
                     </div>
                 </div>
                 {{! Resume Right }}
-                <div class="resume-right basis-8/12 flex flex-col">
+                <div class="resume-right font-sans basis-8/12 flex flex-col">
                     <div class="right-upper-side basis-[9%] flex flex-col justify-center">
                         <h1 id="preview-name" class="text-5xl text-[#424544] font-bold ml-2">Ryomen Sukuna</h1>
                     </div>
@@ -598,7 +601,7 @@
                             </div>
                             <div class="editable space-y-2 basis-[68%]">
                                 {{!-- Created sections go here --}}
-                                
+
                             </div>
                         </div>
                         <div class="basis-[6%] flex flex-col items-center">
